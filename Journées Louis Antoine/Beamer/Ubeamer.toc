@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {french}
+\beamer@sectionintoc {1}{L'espace de Cantor}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{L'espace de Cantor intrins{\`e}que}{2}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{1}{L'ensemble}{2}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{2}{Cardinal}{11}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{3}{Topologie}{20}{0}{1}
+\beamer@subsectionintoc {1}{2}{Les poussi{\`e}res de Cantor}{39}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{1}{Poussi{\`e}re lin{\'e}aire ou ensemble triadique de Cantor}{39}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{2}{Poussi{\`e}re plane}{53}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{3}{Poussi{\`e}re spaciale}{62}{0}{1}
+\beamer@subsectionintoc {1}{3}{Le th{\'e}or{\`e}me de plongement \IeC {\'e}quivalents}{64}{0}{1}
+\beamer@sectionintoc {2}{Louis Antoine}{77}{0}{2}
+\beamer@sectionintoc {3}{Les colliers d'Antoine}{80}{0}{3}
+\beamer@subsectionintoc {3}{1}{Construction}{81}{0}{3}
+\beamer@subsectionintoc {3}{2}{Homotopie}{95}{0}{3}
+\beamer@subsectionintoc {3}{3}{Infinit\IeC {\'e} non d\IeC {\'e}nombrable}{107}{0}{3}
+\beamer@sectionintoc {4}{Ouverture}{111}{0}{4}

@@ -1,0 +1,88 @@
+% This file was created with JabRef 2.7b.
+% Encoding: UTF8
+
+@MISC{Fujiki,
+  author = {Fujiki, Akira},
+  title = {{Nagata threefold and twistor space.}},
+  howpublished = {{Quaternionic structures in mathematics and physics (Trieste, 1994)}},
+  year = {1998},
+  abstract = {{Author's abstract: ``We shall give a twistorial description of a
+	certain threefold constructed by {\it M. Nagata} [Ill. J. Math. 2,
+	490-498 (1958; Zbl 0081.37503)] in quite a different context. We
+	also consider its higher-dimensional analogue. This leads us to a
+	formulation of a general result on the partial compactification of
+	certain class of hyper-K\"ahler manifolds''.}},
+  classmath = {{*53C28 (Twistor methods) 53C26 (Hyper-K\"ahler and quaternionic K\"ahler
+	geometry) }},
+  keywords = {{threefold; hyper-K\"ahler manifolds}},
+  language = {English}
+}
+
+@ARTICLE{HKLR,
+  author = {Hitchin, N. J. and Karlhede, A. and Lindstr{\"o}m, U. and Ro{\v{c}}ek,
+	M.},
+  title = {Hyper-{K}\"ahler metrics and supersymmetry},
+  journal = {Comm. Math. Phys.},
+  year = {1987},
+  volume = {108},
+  pages = {535--589},
+  number = {4},
+  coden = {CMPHAY},
+  fjournal = {Communications in Mathematical Physics},
+  issn = {0010-3616},
+  mrclass = {53C25 (32C10 53C55 53C80 58E99 81E99)},
+  mrnumber = {877637 (88g:53048)},
+  mrreviewer = {Pankaj Topiwala},
+  url = {http://projecteuclid.org/getRecord?id=euclid.cmp/1104116624}
+}
+
+@ARTICLE{nakajima,
+  author = {Nakajima, Hiraku},
+  title = {Quiver varieties and Kac-Moody algebras},
+  journal = {Duke Mathematical Journal},
+  year = {1998},
+  volume = {91},
+  pages = {515--560},
+  number = {3},
+  month = {02},
+  ajournal = {Duke Math. J.},
+  doi = {10.1215/S0012-7094-98-09120-7},
+  publisher = {Duke University Press},
+  url = {http://dx.doi.org/10.1215/S0012-7094-98-09120-7}
+}
+
+@ARTICLE{Schiffmann,
+  author = {Olivier Schiffmann},
+  title = {Vari\'{e}t\'{e}s carquois de Nakajima},
+  journal = {Ast\'{e}risque},
+  year = {2008},
+  volume = {317},
+  pages = {295-344},
+  number = {976},
+  month = {mars},
+  part = {Séminaire Bourbaki}
+}
+
+@ARTICLE{Verbitsky,
+  author = {Verbitsky, M.},
+  title = {A global Torelli theorem for hyperkahler manifolds},
+  journal = {ArXiv e-prints},
+  year = {2009},
+  month = aug,
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl = {http://adsabs.harvard.edu/abs/2009arXiv0908.4121V},
+  archiveprefix = {arXiv},
+  eprint = {0908.4121},
+  keywords = {Mathematics - Algebraic Geometry, Mathematics - Algebraic Topology,
+	Mathematics - Differential Geometry, 53C26, 32G13},
+  primaryclass = {math.AG}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+

@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: poster_gael.aux
+The style file: amsplain.bst
+Database file #1: biblio.bib
+Warning--missing pages in Verbitsky
+You've used 5 entries,
+            2213 wiz_defined-function locations,
+            539 strings with 4563 characters,
+and the built_in function-call counts, 1416 in all, are:
+= -- 124
+> -- 51
+< -- 0
++ -- 22
+- -- 16
+* -- 123
+:= -- 232
+add.period$ -- 5
+call.type$ -- 5
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 55
+empty$ -- 129
+format.name$ -- 16
+if$ -- 285
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 9
+newline$ -- 25
+num.names$ -- 10
+pop$ -- 29
+preamble$ -- 1
+purify$ -- 18
+quote$ -- 0
+skip$ -- 29
+stack$ -- 0
+substring$ -- 97
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 1
+while$ -- 15
+width$ -- 6
+write$ -- 52
+(There was 1 warning)

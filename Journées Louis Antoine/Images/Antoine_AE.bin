@@ -1,0 +1,94 @@
+#include "colors.inc"
+#include "stones.inc"  
+#include "glass.inc"
+camera { orthographic
+         location <0, 5, -10>
+         look_at  <0, 0,  0>
+         angle 15
+}
+
+
+light_source { 
+  <2, 4, -3>*10 color rgb <0.8,0.9,0.95>*0.8  }
+/*  area_light
+  <-0.4,0.2,0>/7 <0.15,0.3,0.5>/7 8 8
+} */
+light_source { 
+  <-1, 4, -3>*10 color White  shadowless }
+
+
+
+
+plane { <0,-1,0> 0.5
+  pigment { color rgb <0.90,0.98,1>*0.95 }
+  finish { ambient 0.9 diffuse 0.1}
+}
+
+
+#declare tab=array[8]
+    {Blue,Cyan*1.3,BrightGold*1.2,Orange, Turquoise,Green, Aquamarine,Green}; // ,Aquamarine
+
+ #declare tab1=array[2]
+    {T_Stone13,T_Stone22}; 
+//=================== différents maillons ====================
+#macro ano(a,b,ro) 
+   union{   cylinder{<-a,0,b>,<a,0,b>,ro}   cylinder{<-a,0,-b>,<a,0,-b>,ro} 
+        #local k= 10;
+        #local ck= 0; 
+        #while(ck<k) 
+               cylinder{<a+b*cos(-pi/2+ck*pi/k),0,b*sin(-pi/2+ck*pi/k)>,<a+b*cos(-pi/2+(ck+1)*pi/k),0,b*sin(-pi/2+(ck+1)*pi/k)>,ro}
+               cylinder{<-a-b*cos(-pi/2+ck*pi/k),0,b*sin(-pi/2+ck*pi/k)>,<-a-b*cos(-pi/2+(ck+1)*pi/k),0,b*sin(-pi/2+(ck+1)*pi/k)>,ro}
+               sphere {<a+b*cos(-pi/2+ck*pi/k),0,b*sin(-pi/2+ck*pi/k)>,ro}  sphere {<-a-b*cos(-pi/2+ck*pi/k),0,b*sin(-pi/2+ck*pi/k)>,ro}
+               #local ck=ck+1;
+        #end
+         sphere {<a,0,b>,ro}  sphere {<-a,0,b>,ro}
+        }
+#end        
+    
+#macro carre(a,b,ro) 
+   union{
+      
+      cylinder{<-a,0,b>,<a,0,b>,ro} cylinder{<a,0,-b>,<a,0,b>,ro}   cylinder{<-a,0,-b>,<-a,0,b>,ro} cylinder{<-a,0,-b>,<a,0,-b>,ro}
+      sphere{<-a,0,b>,ro}   sphere{<a,0,b>,ro}   sphere{<a,0,-b>,ro}  sphere{<-a,0,-b>,ro}  
+       }
+#end 
+//==== n itérations d'un collier de p maillons "base" =============
+//  n : nbre d'itérations ; p : nre de maillons du collier ; r : rayon secondaire du tore ; 
+//  base : forme du maillon ; dep valeur initiale de n ( utilisé pour la coloration)
+#macro colrec(n,p,r,base,dep) 
+      #if(n=1)
+          base //object{pigment{tab[0] }}     
+      #else 
+        #local cp=0; 
+        #local itere=object{colrec(n-1,p,r,base,dep)};       //       
+        union{
+           #while(cp<p) 
+               object{ itere   
+                      scale <r,r,r> 
+                      rotate mod(cp,2)*90*x        //
+                      rotate (90-(cp)*360/p)*y    // 
+                      translate <cos(2*(cp)*pi/p),0,sin(2*(cp)*pi/p)> // coef pour aplatir (ellipse) 
+                      #if (n=dep) 
+                          texture{tab1[mod(cp,2)] scale 0.2 finish{ambient 0.4 diffuse 0.2 reflection 0.02 specular 0.5}}
+                       #end                   // pigment{tab[mod(cp,2)] } #end
+                     } 
+               #local cp=cp+1;
+           #end
+  /*        //============= gaine transparente pour le cas du tore ===================
+           #if (n=dep)   object{ colrec(dep-1,p,r,torus{R,r+0.07},dep) texture{T_Glass3 pigment{ Aquamarine transmit 0.6 }
+                                   finish{ambient 0.4 diffuse 0.2 reflection 0.02 specular 0.5}}}         #end 
+          
+          //============= fin de gaine transparente pour tore ============  
+ */      
+          }
+     #end
+#end 
+ 
+   
+//==================== dans colrec, il faut que le premier et le dernier paramêtre soit égaux =================== 
+//================================= pour obtenir un coloriage correct ===========================================
+
+#declare R=1.1; #declare r=0.25; #declare n= 3; object{colrec(n,18,0.25,ano(0.7,0.5,0.2),n)  rotate 30*y} 
+ //  #declare R=1.2; #declare r=0.25;#declare n= 3; object{colrec(n,14,r,carre(R,0.7,r),n)  rotate 30*y}
+ //#declare R=1; #declare r=0.25; declare n= 3;  object{colrec(3,16,r,torus{R,r},3)  rotate 20*y}
+ 

@@ -1,0 +1,18 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{{Dun}09}
+
+\bibitem[{Dun}09]{TwistorThED}
+Maciej {Dunajski}, \emph{{Twistor theory and differential equations}}, Journal
+  of Physics A Mathematical General \textbf{42} (2009), 4004.
+
+\bibitem[WW91]{Ward-Wells}
+R.S. Ward and R.O. Wells, \emph{Twistor geometry and field theory}, Cambridge
+  Monographs on Mathematical Physics, Cambridge University Press, 1991.
+
+\end{thebibliography}
