@@ -1,0 +1,177 @@
+\documentclass[12pt,makeidx, draft]{amsart}
+\usepackage[couleur,thm,cat]{amsdip}
+
+\DeclareMathOperator\Nat{\text{Nat}}
+
+\title{Avatars du lemme de Yoneda}
+\begin{document}
+\maketitle
+
+
+\part{Ordre de présentation}
+\begin{itemize}
+\item Cayley
+\item Logique
+\item Ordres (Complétion de $\Q,\leq$)
+\item Ev
+\item Evn
+\item Philo
+\end{itemize}
+
+\part{Avatars}
+\section{Groupes}
+
+\subsection{Théorème de Cayley}
+Soit $G$ un groupe d'ensemble sous-jacent $G_{\text{ens}}$, alors
+$G \hookrightarrow \Sf(G_{\text{ens}})$
+
+
+\subsubsection{Interprétation catégories}
+$G$ Catégorie constituée d'un élément $*$ et dont les flèches sont les éléments de $G_{\text{ens}}$, avec composition la loi de groupe.
+
+Un préfaisceau $\Ff$ sur $G$ est donc un ensemble $E = \Ff(*)$ et un morphisme de groupe $G -> \Sf(E)$ c'est-à-dire une action de $G$ sur $E$.
+
+Le foncteur $\Hom(\_,*)$ est le préfaisceau associé à l'ensemble $G_{\text{ens}}$ qui correspond à l'action par multiplication à gauche (droite?)
+
+Alors
+\begin{equation}
+G = \Hom(*,*) \simeq \Nat(\Hom(\_,*),\Hom(\_,*))
+\end{equation}
+
+où $\Nat(\Hom(\_,*),\Hom(\_,*))$ est l'ensemble des endomorphismes de $G$-actions sur $G_{\text{ens}}$ pour la multiplication à gauche. 
+Un tel endomorphisme induit toujours une bijection de $G_{\text{ens}}$, qui le détermine complètement, d'où l'inclusion !
+
+\section{Logique}
+\begin{equation}\label{logique}
+( \forall X, (X \Rightarrow A) \Rightarrow (X \Rightarrow B))
+\quad
+\text{entraine}
+\quad
+A \Rightarrow B
+\end{equation}
+
+On considère la catégorie des formules du premier ordre bien formées en les variables propositionelles $A,B,\cdots$
+Donc les flèches sont les implications sémantiques
+
+Le faisceau représentable de $A$ est l'ensemble des $X$ tels que $(X\Rightarrow A)$.
+
+Un morphisme de faisceau entre $F$ et $G$ est la donnée pour tout $A$ d'une application $F(A) \to G(A)$ naturelle en $A$.
+
+L'hypothèse de \eqref{logique} se traduit par l'implication $X \in \hat{A} \Rightarrow X \in \hat{B}$ donc l'inclusion $\hat{A} \subseteq \hat{B}$ donc $A \in \hat{B}$ donc $A \Rightarrow B$.
+
+\section{Ordres}
+
+Soit $(E,\leq)$ un ensemble totalement ordonné.
+À $x$ on associe $I(x)$ : l'ensemble des éléments inférieurs à $x$.
+
+Et comme l'ordre est total si $I(x) = I(y)$, alors $x=y$
+
+De plus, considérons $E'$ l'ensemble des $J \subseteq E$ tels que si $x \in J$ et $y \leq x$ alors $y \in J$. Ainsi $E'$ est l'ensemble des parties de $E$ "stables par inférieur".
+
+Les résultats précédents nous dises que $E$ s'injecte dans $E'$.
+
+On a de plus un ordre sur $E'$ qui étend celui de $E$ : 
+$J \leq K$ ssi $J \subset K$.
+\subsection{Complétion $\Q \to \R$}
+Dans le cas $E = \Q$ munit de l'ordre usuel,
+on a des ensembles de $E'$ qui ne correspondent pas à des $I(x)$ pour $x \in \Q$.
+
+Exemple: $J = \ens{y \in \Q}{y^2 \leq 2}$ n'est pas de la forme $I(x)$, mais est bien un élément de $E'$.
+
+Prenons un élément $J$ de $E'$, c'est une partie de $Q$ donc de $R$, par suite elle est soit vide soit admet une borne supérieure finie ou infinie. Si elle admet une borne supérieure $x$, alors elle est de la forme $\ens{y\in \Q}{y \leq x}$
+On notera $-\infty$ la partie vide de $\Q$ et $+\infty$ la partie pleine.
+
+Alors la distinction ci-dessus montre que $E' = \R \cup \{\pm \infty\}$, avec l'ordre naturel.
+
+Remarque à Tristan, $\R$ n'est peut-être pas naturel, mais $\bar\R$ oui !
+
+\section{EV}
+Soit $E$ un espace vectoriel (topologique, euclidien, hermitien, algèbre…) sur $\R$ ou $\C$.
+
+$E^* = \Hom(E,\K)$
+Alors
+\begin{align*}
+E &\longrightarrow E^{**}\\
+x &\mapsto (f \mapsto f(x)) 
+\end{align*}
+est une injection
+
+
+Ev comme cat avec un unique obj enrichie sur $\K$-ev
+
+Un préfaisceau $\Ff$ sur $E$ est un $\K$-ev $V = \Ff(*)$ munit d'une application $\K$-linéaire $E = \Hom(*,*) \to \Hom(\Ff(*),\Ff(*)) = \End(V)$
+
+\begin{equation}
+E = \Hom(*,*) \cong \Nat(\Hom(\_,*),\Hom(\_,*))
+\end{equation}
+
+\section{Analyse Fonctionnelle}
+
+A locally integrable function on an open domain is determined by the knowledge of the values of the integrals against test functions
+
+Soit $U$ un ouvert de $\R^N$ et soient $f,g \in L^1_{\text{loc}}(U)$. 
+
+Si pour tout $\phi \in \Cc^\infty_c(U)$, 
+\[
+\int_U f\phi = \int_U g\phi
+\]
+alors $f=g$.
+
+
+\section{Fourier}
+
+\section{Topologie}
+
+\subsection{Faisceaux}
+
+\subsection{Caractérisation séquentielle continuité}
+\[
+x_n \to x
+\quad \Rightarrow\quad
+f(x_n) \to f(x)
+\]
+\section{Artin scheme $\K[\varepsilon]/(\varepsilon^2)$}
+
+\part{Philosophie}
+
+\section{Physics}
+In his Algebraic Geometry class, \name{Ravi}{Vakil} explained Yoneda's lemma like this: 
+\begin{quote}
+You work at a particle accelerator. You want to understand some particle. All you can do are throw other particles at it and see what happens. If you understand how your mystery particle responds to all possible test particles at all possible test energies, then you know everything there is to know about your mystery particle.
+\end{quote}
+
+\section{L1 loc}
+
+
+
+A locally integrable function on an open domain is determined by the knowledge of the values of the integrals against test functions
+
+
+\subsection{Transformée de Radon}
+
+\section{Action de structures math. sur elles memes}
+
+\section{Sphère d'Aurelien}
+Ceci dit c'est naturel en fait de faire ça, car lorsque tu travailles sur un objet géométrique, par exemple une sphère, tu n'imagines jamais l'objet intrinsèquement, tu le vois toujours comme plongé dans un $\R^n$, tu regardes les fonctions dessus, et même lorsque tu l'observes tu en fais des projections sur ta rétine, donc tu ne considère jamais l'objet intrinsèquement mais que les fonctions sur celui ci.
+
+\part{Histoire}
+
+\section{Rencontre Sanders-Nobuo}
+TODO
+
+\part{Exos}
+\section{Exercise A:} Let U:Grp→Set be the forgetful functor. What are the endomorphisms of U? If you can, even describe End(U) as a monoid and Aut(U) as a group. What about other forgetful functors from algebraic structures? Choose your favorite example. 
+
+\section{Exercise B:} What does Yoneda's Lemma say for functors which are defined on a category with just one object? As a corollary, deduce Cayley's "Theorem". 
+
+\section{Exercise C:} Let M⊆N be normal subgroups of a group G. Deduce (G/M)/(N/M)≅G/N with the help of the Yoneda lemma. If you are bored, go through some arbitrary algebra text book and prove all these canonical isomorphisms (direct sums, tensor products, localization, Kähler differentials, ...) with the Yoneda lemma, thereby getting rid of irrelvant element chases. 
+
+\section{Exercise D (a little bit more advanced, but still easy):} Let D be a category with all small colimits and C be a small category. Define Cˆ to be the category of "presheaves" on C, that is, functors Cop→Set. Find an equivalence of categories between functors C→D and cocontinuous functors Cˆ→D. This is induced by the Yoneda embedding Y:C→Cˆ; which thus is the universal cocompletion of C. What happens when C has just one object? 
+
+\part{Sauce}
+https://qchu.wordpress.com/2012/04/02/the-yoneda-lemma-i/
+
+
+Mail AURELIEN
+
+\end{document}
