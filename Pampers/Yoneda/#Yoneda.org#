@@ -1,52 +1,56 @@
 #+TITLE:     Avatars du lemme de Yoneda
 #+AUTHOR:    Basile Pillet
+#+STARTUP: indent
+#+STARTUP: hidestars
 
 <2016-05-06 Thu 13:00>
 
-** Avatars
-*** Théorème de Cayley
+* Avatars
+** Théorème de Cayley
 
 Enoncé
 
-*** Un théorème de logique propositionelle
+** Un théorème de logique propositionelle
 
 Enoncé
 
-*** Rentrer dans les ordres
+** Rentrer dans les ordres
 
 Enoncé
 Compléter Q
 
-*** TODO Ev et Evns
+** TODO Ev et Evns                                                    :DUAL:
 
-*** TODO L1loc
+** TODO L1loc                                                         :DUAL:
 
 "A locally integrable function on an open domain is determined by the knowledge of the values of the integrals against test functions"
 
-** Philosophie(s)
+* Philosophie(s)
 
-*** TODO Complétion : Le truc qui contient tous les autres
+Les flèches * -> A sont exactement les éléments de A.
+
+** TODO Complétion : Le truc qui contient tous les autres
 
 
-*** TODO Faire agir les structures mathématiques sur elles-meme
+** TODO Faire agir les structures mathématiques sur elles-meme
 
 
-*** Platonicisme
+** Platonicisme
     > Un objet c d'une catégorie est entièrement décris par Hom(_,c)
 
 C'est-à-dire connaitre un objet c'est savoir comment il interragit avec les autres.
 
-**** En physique
+*** En physique
 #+BEGIN_QUOTE
 You work at a particle accelerator. You want to understand some particle. All you can do are throw other particles at it and see what happens. If you understand how your mystery particle responds to all possible test particles at all possible test energies, then you know
-everything there is to know about your mystery particle.
+everything there is to know about your mystery particle.  -- Ravi Vakil
 #+END_QUOTE
 
 Mettons qu'on travaille dans un accélérateur de particules. On veut comprendre une nouvelle particule. Tout ce qu'on peut faire c'est lancer d'autres particules dessus et observer ce qu'il se passe. Si on comprend comment notre particule mystérieuse réagit à chaque particule test qu'on lui lance à chaque niveau d'énergie possible, alors on sait tout ce qu'il y a savoir sur notre particule mystérieuse
 
-**** Caverne de Platon
+*** Caverne de Platon
 La réalité n'est déterminé que par l'ensemble des projections dont on dispose.
 
 #+BEGIN_QUOTE
-lorsque tu travailles sur un objet géométrique, par exemple une sphère, tu n’imagines jamais l’objet intrinsèquement, tu le vois toujours comme plongé dans un R^n , tu regardes les fonctions dessus, et même lorsque tu l’observes tu en fais des projections sur ta rétine, donc tu ne considère jamais l’objet intrinsèquement mais que les fonctions sur celui ci.--Aurélien Sagnier
+lorsque tu travailles sur un objet géométrique, par exemple une sphère, tu n’imagines jamais l’objet intrinsèquement, tu le vois toujours comme plongé dans un R^n , tu regardes les fonctions dessus, et même lorsque tu l’observes tu en fais des projections sur ta rétine, donc tu ne considère jamais l’objet intrinsèquement mais que les fonctions sur celui ci. -- Aurélien Sagnier
 #+END_QUOTE
