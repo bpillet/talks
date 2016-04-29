@@ -1,7 +1,7 @@
 # Additionner, et diviser ; questions ouvertes d'arithmétique
 
 Le but de cet exposé est de présenter 4 problèmes ouverts (et anciens) d'Arithmétiques élémentaire. Et de montrer qu'ils posent tous les même question à savoir     
-    Que dire des diviseurs de a + b à partir de données sur les diviseurs de a et b.
+> Que dire des diviseurs de a + b à partir de données sur les diviseurs de a et b.
 
 Question très vaste !
 
@@ -9,7 +9,7 @@ Question très vaste !
 
 La conjecture de Goldbach est une assertion mathématique non démontrée qui s’énonce comme suit :
 
-    Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres premiers.
+> Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres premiers.
 
 Exemple  
 22 = 11 + 11 = 5 + 17 = 3 + 19
@@ -18,15 +18,15 @@ Formulée en 1742 par Christian Goldbach, c’est l’un des plus vieux problèm
 
 La question se reformule sous la forme
 
-    Quels sont les nombres pair de la forme p+q avec p et q premiers
+> Quels sont les nombres pair de la forme p+q avec p et q premiers
 
 Peu de progrès depuis son énoncé ! Plusieurs justifications statistiques basées sur la répartition des nombres premiers.
 
 résultats récents (Tao)  
-    Tout entier impair > 1 est somme de cinq nombres premiers au plus.
+> Tout entier impair > 1 est somme de cinq nombres premiers au plus.
 
 Et (Helfgott)   
-    Tout entier impair > 5 est somme de trois nombres premiers.
+> Tout entier impair > 5 est somme de trois nombres premiers.
 
 la conjecture de Goldbach est vérifiée pour tous les entiers pairs jusqu’à 4×10^18
 
@@ -36,13 +36,13 @@ Cette conjecture partage avec l'hypothèse de Riemann et la conjecture de Goldba
 
 En 1849, Alphonse de Polignac émit une conjecture plus générale : la conjecture de Polignac :
 
-    Tout nombre pair est égal à la différence de deux nombres premiers consécutifs d'une infinité de manières.
+> Tout nombre pair est égal à la différence de deux nombres premiers consécutifs d'une infinité de manières.
 
 dont le cas n = 2 correspond à la conjecture des nombres premiers jumeaux.
 
 ### Enoncé
 
-    Existe-t-il une infinité de nombre premiers jumeaux ?
+> Existe-t-il une infinité de nombre premiers jumeaux ?
 
 * (3, 5)
 * (5, 7)
@@ -53,13 +53,13 @@ dont le cas n = 2 correspond à la conjecture des nombres premiers jumeaux.
 
 ou reformulé autrement
 
-    Existe-il une infinité de couples de nombres premiers (p,q) tels que p+q soit premier.
+> Existe-il une infinité de couples de nombres premiers (p,q) tels que p+q soit premier.
 
 En effet si p et q sont impairs alors p+q ne peut être premier. Donc nécessairement (quitte à supposer p>q) q = 2
 
 Donc cette question est de la forme 
 
-    Que dire des diviseurs premiers d'une somme de nombres premiers !
+> Que dire des diviseurs premiers d'une somme de nombres premiers !
 
 
 ## Syracuse ou Collatz
@@ -70,8 +70,8 @@ Posée en 1928 par Collatz.
 
 n un entier, 
 on définit la fonction f par  
-   f(n) = n/2 si n est pair  
-   f(n) = 3n+1 si n est impair
+> f(n) = n/2 si n est pair  
+> f(n) = 3n+1 si n est impair
 
 itérations de f ?
 
@@ -109,7 +109,7 @@ exemples
 
 ### Conjecture
 
-    Est ce que pour tout entier n, l'itération de f amène à 1.
+> Est ce que pour tout entier n, l'itération de f amène à 1.
 
 ### Probas
 
@@ -129,7 +129,7 @@ L'intérêt de g c'est qu'on ne sait rien dire de la parité de g(n) en connaiss
 > g(n) = (4n+1)/4 = n + 1/4
 
 Mais la question est toujours la même  
-    que dire de la divisibilité par 4 d'un nombre calculé à partir de (3n+1) pour n pair.
+> que dire de la divisibilité par 4 d'un nombre calculé à partir de (3n+1) pour n pair.
 
 > les résultats probabilistes partent du principe qu'il y a une chance sur 2.
 
@@ -140,6 +140,15 @@ Posée en 1985 par Osterlé et Masser.
 ### Radical
 
 rad(n) est le radical de n, c'est-à-dire le produit des nombres premiers divisant n.
+
+#### Exemples : 
+* rad(15) = 15
+* rad(16) = 2
+* rad(17) = 17
+* rad(18) = 6
+
+#### Propriété
+rad(ab) = rad(a)rad(b) si et seulement si a et b sont premiers entre eux
 
 ### Enoncé (positif)
 

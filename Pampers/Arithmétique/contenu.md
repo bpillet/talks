@@ -129,7 +129,11 @@ L'intérêt de g c'est qu'on ne sait rien dire de la parité de g(n) en connaiss
 > g(n) = (4n+1)/4 = n + 1/4
 
 Mais la question est toujours la même  
-> que dire de la divisibilité par 4 d'un nombre calculé à partir de (3n+1) pour n pair.
+> que dire de la divisibilité par 4 d'un nombre calculé à partir de (3n+1) pour n impair.
+
+ou encore en posant n=2k+1
+> que dire de la divisibilité par 4 de 6k+2
+c'est à dire de la divisibilité par 2 de 3k+2
 
 > les résultats probabilistes partent du principe qu'il y a une chance sur 2.
 
@@ -140,6 +144,15 @@ Posée en 1985 par Osterlé et Masser.
 ### Radical
 
 rad(n) est le radical de n, c'est-à-dire le produit des nombres premiers divisant n.
+
+#### Exemples : 
+* rad(15) = 15
+* rad(16) = 2
+* rad(17) = 17
+* rad(18) = 6
+
+#### Propriété
+rad(ab) = rad(a)rad(b) si et seulement si a et b sont premiers entre eux
 
 ### Enoncé (positif)
 

@@ -21,16 +21,21 @@ Compléter Q
 
 ** TODO Ev et Evns                                                    :DUAL:
 
+E \to E** counité d'une adjonction donc élément universel parmis les transformations naturelles id -> bidual
+
 ** TODO L1loc                                                         :DUAL:
 
 "A locally integrable function on an open domain is determined by the knowledge of the values of the integrals against test functions"
 
+
+
 * Philosophie(s)
 
 Les flèches * -> A sont exactement les éléments de A.
+L'ensemble des flèches B -> A donc noté Hom(B,A), représente donc les B-points de A. Une forme généralisée de points.
 
 ** TODO Complétion : Le truc qui contient tous les autres
-
+Exemple catégorie qui n'est pas (co-)complète : Catégorie des corps. Un produit infini n'est pas forcément un corps.
 
 ** TODO Faire agir les structures mathématiques sur elles-meme
 
