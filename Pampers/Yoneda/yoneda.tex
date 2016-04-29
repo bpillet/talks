@@ -2,6 +2,7 @@
 \usepackage[couleur,thm,cat]{amsdip}
 
 \DeclareMathOperator\Nat{\text{Nat}}
+\DeclareMathOperator\Dd{\mathcal{D}}
 
 \title{Avatars du lemme de Yoneda}
 \begin{document}
@@ -29,11 +30,16 @@ $G \hookrightarrow \Sf(G_{\text{ens}})$
 \subsubsection{Interprétation catégories}
 $G$ Catégorie constituée d'un élément $*$ et dont les flèches sont les éléments de $G_{\text{ens}}$, avec composition la loi de groupe.
 
-Un préfaisceau $\Ff$ sur $G$ est donc un ensemble $E = \Ff(*)$ et un morphisme de groupe $G -> \Sf(E)$ c'est-à-dire une action de $G$ sur $E$.
+Un préfaisceau $\Ff$ sur $G$ est donc un ensemble $E = \Ff(*)$ et un morphisme de groupe $G \to \Sf(E)$ c'est-à-dire une action de $G$ sur $E$.
+
+Une première version de Yoneda nous donne
+\begin{equation}
+E = \Ff(*) \simeq \Nat(\Hom(*,\_),\Ff)
+\end{equation}
 
 Le foncteur $\Hom(\_,*)$ est le préfaisceau associé à l'ensemble $G_{\text{ens}}$ qui correspond à l'action par multiplication à gauche (droite?)
 
-Alors
+Alors la version de Yoneda contravariante (plongement de Yoneda) donne
 \begin{equation}
 G = \Hom(*,*) \simeq \Nat(\Hom(\_,*),\Hom(\_,*))
 \end{equation}
@@ -96,7 +102,8 @@ x &\mapsto (f \mapsto f(x))
 \end{align*}
 est une injection
 
-
+\subsection{Interprétation catégorique}
+\subsubsection{Catégorie à $1$-élément}
 Ev comme cat avec un unique obj enrichie sur $\K$-ev
 
 Un préfaisceau $\Ff$ sur $E$ est un $\K$-ev $V = \Ff(*)$ munit d'une application $\K$-linéaire $E = \Hom(*,*) \to \Hom(\Ff(*),\Ff(*)) = \End(V)$
@@ -104,10 +111,41 @@ Un préfaisceau $\Ff$ sur $E$ est un $\K$-ev $V = \Ff(*)$ munit d'une applicatio
 \begin{equation}
 E = \Hom(*,*) \cong \Nat(\Hom(\_,*),\Hom(\_,*))
 \end{equation}
+\subsubsection{Dualité}
+Considérons $\Cc$ la catégorie (enrichie sur $\K$-ev, ou resp...) contenant $2$ objets (formels) $(\K)$ et $(E)$ et telle que $\Cc((\K),(E)) = E$ en tant qu'ev (ou resp...). Et de même $\Cc((\K),(\K)) = \K$ avec composition évidente.
 
+Un préfaisceau (enrichi) sur $\Cc$ est donc la donnée de deux $K$-ev $Y = \Ff((\K))$ et $X=\Ff((E))$ et pour chaque $f \in E = \Cc((\K),(E))$ la donnée d'un $\Ff(f) \in \Hom(X,Y)$ tel que cette association soit $\K$-linéaire. Donc
+\[
+\hat{\Cc} = \ens{\left(X,Y,\phi: E \to\Hom(X,Y)\right)}{X,Y \text{ ev  et }\phi\text{ linéaire. }}
+\]
+
+On a un préfaisceau particulier, appelé \textit{dual} (noté $\Dd$) qui correspond à 
+\begin{align*}
+X &= E^*\\
+Y &= \K\\
+\phi(x) &= f \mapsto f(x)
+\end{align*}
+
+Une transformation naturelle entre $\Ff = (X,Y,\phi)$ et $\Gg = (X',Y',\phi')$ dans $\Cc$ est la donnée de deux applications $\K$-linéaire $\alpha : X \to X'$ et $\beta : Y \to Y'$ telles que pour tout $f \in E$, 
+\[
+\beta \circ \phi(f) = \phi'(f) \circ \alpha
+\]
+En particulier si $\Gg = \Hom(\_,(\K)) = \Dd$, $X' = E^*$, $Y'=\K$ et $\phi' : E \to \Hom(X',Y')$
+
+Alors (co)Yoneda nous dit pour $M \in \Cc$
+\begin{equation}
+\Dd(M) \simeq \Nat(\Hom(\_,M),\Dd)
+\end{equation}
+Pour $M=(\K)$ on a donc
+\[
+\K = \Dd((\K)) \simeq \Nat(\Dd,\Dd)
+\]
+En gros on sait que $\Dd$ est unique à unique isomorphisme près.
 \section{Analyse Fonctionnelle}
 
+\begin{quote}
 A locally integrable function on an open domain is determined by the knowledge of the values of the integrals against test functions
+\end{quote}
 
 Soit $U$ un ouvert de $\R^N$ et soient $f,g \in L^1_{\text{loc}}(U)$. 
 

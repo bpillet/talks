@@ -1,0 +1,30 @@
+#+TITLE:     Avatars du lemme de Yoneda
+#+AUTHOR:    Basile Pillet
+
+
+** Avatars
+
+*** Théorème de Cayley
+
+Enoncé
+
+*** Un théorème de logique propositionelle
+
+*** Rentrer dans les ordres
+Compléter Q
+
+** Philosophie
+
+*** Complétion : Le truc qui contient tous les autres
+
+*** Faire agir les structures mathématiques sur elles-meme
+
+
+*** Platonicisme
+    > Un objet c d'une catégorie est entièrement décris par Hom(_,c)
+
+C'est-à-dire connaitre un objet c'est savoir comment il interragit avec les autres.
+
+#+SEQ_TODO: TODO DONE
+
+* TODO EV
