@@ -16,12 +16,14 @@ Enoncé
 
 ** Rentrer dans les ordres
 
-Enoncé
-Compléter Q
+-Enoncé
+-Compléter Q
 
 ** TODO Ev et Evns                                                    :DUAL:
 
-E \to E** counité d'une adjonction donc élément universel parmis les transformations naturelles id -> bidual
+E \to E** unité d'une adjonction donc élément universel parmis les transformations naturelles id -> bidual
+
+cf. https://ncatlab.org/nlab/show/adjunction
 
 ** TODO L1loc                                                         :DUAL:
 
@@ -35,13 +37,16 @@ Les flèches * -> A sont exactement les éléments de A.
 L'ensemble des flèches B -> A donc noté Hom(B,A), représente donc les B-points de A. Une forme généralisée de points.
 
 ** TODO Complétion : Le truc qui contient tous les autres
-Exemple catégorie qui n'est pas (co-)complète : Catégorie des corps. Un produit infini n'est pas forcément un corps.
+*** Exemple catégorie qui n'est pas (co-)complète : Catégorie des corps.
+Un produit de corps n'est pas forcément un corps.
+Un préfaisceau de corps est la donnée pour tout sous-corps d'un ensemble qui respectent les inclusions.
+> Galois ?
 
 ** TODO Faire agir les structures mathématiques sur elles-meme
 
 
 ** Platonicisme
-    > Un objet c d'une catégorie est entièrement décris par Hom(_,c)
+> Un objet c d'une catégorie est entièrement décris par Hom(_,c)
 
 C'est-à-dire connaitre un objet c'est savoir comment il interragit avec les autres.
 
@@ -59,3 +64,16 @@ La réalité n'est déterminé que par l'ensemble des projections dont on dispos
 #+BEGIN_QUOTE
 lorsque tu travailles sur un objet géométrique, par exemple une sphère, tu n’imagines jamais l’objet intrinsèquement, tu le vois toujours comme plongé dans un R^n , tu regardes les fonctions dessus, et même lorsque tu l’observes tu en fais des projections sur ta rétine, donc tu ne considère jamais l’objet intrinsèquement mais que les fonctions sur celui ci. -- Aurélien Sagnier
 #+END_QUOTE
+
+Cependant
+#+BEGIN_QUOTE
+Ce lemme a inspiré nombre de gloses et d’interprétations. L’interprétation perspectiviste, qui énonce qu’« un objet s’identifie à l’intégrale des points de vue sur cet objet », est éclairante, mais guère rigoureuse : il faudrait en effet convenir que les « points de vue » réciproques sont les morphismes de la catégorie que l’on considère ; or il semble difficile d’admettre que la composition d’un point de vue de A sur B avec un point de vue de B sur C détermine un point de vue de A sur C, comme il serait requis dans une catégorie...
+
+On voit bien sur cet exemple les difficultés des généralisations philosophiques d’énoncés mathématiques, qui ne laissent pas d’être éclairantes en dépit de leurs incohérences en tant qu’interprétations.
+
+[...Il faut aussi...] insister sur le fait que le point de vue de l’objet sur lui-même, crucial dans la démonstration du lemme, fait partie de l’intégrale, ce qui censure bien des gloses abusives.
+#+END_QUOTE
+
+** Grothendieck
+Les catégories de préfaisceaux sont parfaites : On peut faire des maths/de la logique dedans comme quand on travaille avec des ensembles (presque : logique constructiviste)
+Leurs seuls défauts : Elles sont trop grosses... Beaucoup beaucoup. Exemple si on prend la catégorie des ouverts d'un espace topologique, un préfaisceau est la donnée pour chacun de ces ouverts d'un ensemble + restrictions. C'est bien trop vaste pour qu'on puisse le voir comme "une généralisation des ouverts de l'espace topologique"
