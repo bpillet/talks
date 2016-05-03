@@ -2,45 +2,128 @@
 #+AUTHOR:    Basile Pillet
 #+STARTUP: indent
 #+STARTUP: hidestars
+#+OPTIONS: tex:t          Do the right thing automatically (MathJax)
+#+OPTIONS: tex:nil        Do not process LaTeX fragments at all
+#+OPTIONS: tex:verbatim   Verbatim export, for jsMath or so
+
 
 <2016-05-06 Thu 13:00>
 
 * Avatars
 ** Théorème de Cayley
 
-Enoncé
+*** Enoncé                                                         :Exposé:
+
+*** DONE Version représentations/actions de groupes
+**** G-ensemble
+Une représentation de $G$ est la donnée d'un ensemble $E$ et pour tout $g \in G$ d'une bijection $E(g)$ de $E$.
+
+**** Morphisme de G-ensemble
+Un morphisme de représentation $\phi$ entre $E$ et $F$ est la donnée pour tout $g \in G$ d'une application $\phi_g : E \to F$ tel que le diagramme commute : $F(g) \circ \phi_g = \phi_g \circ E(g)$
+
+**** Enoncé
+Le lemme de Yoneda nous associe à chaque élément de $G$ un morphisme de représentation entre G_gauche et lui-même, qui se trouve être un automorphisme et induit donc pour $g=e$ une bijection de $|G|$.
+
+*** Enoncé monoïde 
+Pareil pour les monoïdes. Pas pour les structures plus faibles !
+
+**** Raison                                                        :Bonus:
+Les monoïdes sont exactement les catégories à $1$ élément.
 
 ** Un théorème de logique propositionelle
 
-Enoncé
+*** Enoncé                                                         :Exposé:
+(3)   (∀X, (X ⇒ A) ⇒ (X ⇒ B)) entraine A ⇒ B
 
-** Rentrer dans les ordres
+*** Preuve                                                          :Bonus:
+On considère la catégorie des formules du premier ordre bien formées en les variables propositionelles A, B, · · · Dont les flèches sont les implications sémantiques.
 
--Enoncé
--Compléter Q
+Le faisceau représentable de A est l’ensemble des X tels que (X ⇒ A).
 
-** TODO Ev et Evns                                                    :DUAL:
+Un morphisme de faisceau entre F et G est la donnée pour tout A d’une application F (A) → G(A) naturelle en A.
+L’hypothèse de (3) se traduit par l’implication X ∈ Aˆ ⇒ X ∈ Bˆ d'où l'inclusion Aˆ< Bˆ donc A ∈ Bˆ donc A ⇒ B.
 
-E \to E** unité d'une adjonction donc élément universel parmis les transformations naturelles id -> bidual
+** Rentrer dans les ordres                                          :Exposé:
 
-cf. https://ncatlab.org/nlab/show/adjunction
+*** Enoncé
+Soit (E, ≤) un ensemble totalement ordonné. À x on associe I(x) : l’ensemble des éléments inférieurs à x.
+
+Et comme l’ordre est total si I(x) = I(y), alors x = y
+
+De plus, considérons E' l’ensemble des J ⊆ E tels que si x ∈ J et y ≤ x alors
+y ∈ J. Ainsi E' est l’ensemble des parties de E "stables par inférieur".
+
+Les résultats précédents nous dises que E s’injecte dans E' .
+
+On a de plus un ordre sur E' qui étend celui de E : J ≤ K ssi J ⊂ K.
+
+*** Compléter Q
+Dans le cas E = Q munit de l’ordre usuel, on a des elements de E' qui ne correspondent pas à des I(x) pour x ∈ Q.
+
+Exemple : J = {y ∈ Q | y 2 ≤ 2 } n’est pas de la forme I(x), mais est bien un élément de E' .
+
+Prenons un élément J de E' , c’est une partie de Q donc de R, par suite elle est soit vide soit admet une borne supérieure finie ou infinie. Si elle admet une borne supérieure x, alors elle est de la forme {y ∈ Q | y ≤ x}.
+On notera −∞ la partie vide de Q et +∞ la partie pleine.
+Alors la distinction ci-dessus montre que E = R ∪ {±∞}, avec l’ordre naturel.
+
+Remarque à Tristan, R n’est peut-être pas naturel, mais $\bar\R$ oui
+
+** Propriété universelle                                            :Exposé:
+Toute propriété universelle convient
+Le "il existe un unique [morphisme]" provient du lemme de Yoneda.
+*** Exemple (un peu original)
+The field of fractions $K$ of $R$ is characterised by the following universal property: if $h:R\rightarrow F$ is an injective ring homomorphism from $R$ into a field $F$, then there exists a unique ring homomorphism $g:K\rightarrow F$ which extends $h$.
+
+** DONE Ev et Evns                                             :DUAL:Exposé:
+
+*** Yoneda
+Dès qu'on a une notion de dualité, on a toujours un morphisme naturel $E \to Bidual(E)$. Ça peut paraître peu, mais le mot naturel n'est pas à prendre à la légère. Il entraîne en particulier que cette application est presque toujours injective. Et si elle ne l'est pas elle est triviale en un certain sens.
+
+*** Exemples
+- Ev
+- Evn
+- Evt (avec flèche nulle si les evt ne sont pas localement convexes)
+- Dual abélien d'un groupe (Hom(G,Z)), avec morphisme trivial sur les éléments de torsion.
+
+*** Adjonctions                                                     :Bonus:
+$E \to E^{**}$ unité d'une adjonction donc élément universel parmis les transformations naturelles $id \to bidual$
+
+cf. [[https://ncatlab.org/nlab/show/adjunction][Adjunction in ncatlab]]
 
 ** TODO L1loc                                                         :DUAL:
 
 "A locally integrable function on an open domain is determined by the knowledge of the values of the integrals against test functions"
 
-
+**** Référence                                                       :Ref:
+Theory and Applications of Categories, Vol. 23, No. 12, 2010, pp. 243–250.
+A CATEGORICAL APPROACH TO INTEGRATION
+by REINHARD B ORGER
 
 * Philosophie(s)
 
 Les flèches * -> A sont exactement les éléments de A.
 L'ensemble des flèches B -> A donc noté Hom(B,A), représente donc les B-points de A. Une forme généralisée de points.
 
-** TODO Complétion : Le truc qui contient tous les autres
+** DONE Complétion : Le truc qui contient tous les autres
 *** Exemple catégorie qui n'est pas (co-)complète : Catégorie des corps.
 Un produit de corps n'est pas forcément un corps.
 Un préfaisceau de corps est la donnée pour tout sous-corps d'un ensemble qui respectent les inclusions.
-> Galois ?
+Ces inclusions forment un $G$-ensemble sous l'action d'un groupe (Automorphismes/Galois)
+
+*** Meilleur exemple : La catégorie des anneaux
+Si on la voit comme un catégorie enrichie sur les $\Z$-modules (préadditive) et qu'on prend les foncteurs qui correspondent, alors la catégorie des préfaisceaux est celles des Modules-à-droite-sur-un-anneaux, et l'énoncé de Yoneda donne (pour tout M, R-module à droite)
+\[
+M \simeq Hom_{R}(R,M)
+\]
+La catégorie des modules est abélienne (mieux que préadittive)
+
+*** Autre exemple : Ouverts d'un espace topologique.
+Il y a un ensemble vide (initial) et un ensemble plein (terminal) mais une intersection quelconque d'ouverts n'existe pas toujours dans la catégorie des ouverts. Ça peut par exemple être un singleton. Mais du point de vue de la catégorie, elle voit que les ouverts dedans (ie vide). Ainsi même si notre topologie est assez fine pour repérer les points, la catégorie associée ne les voit pas.
+Par contre la catégorie des (pré-)faisceaux oui : avec les faisceaux gratte-ciel
+
+*** Terminologie
+**** Représentable
+Truc de la catégorie complété qui provient en fait de la petite catégorie de départ.
 
 ** TODO Faire agir les structures mathématiques sur elles-meme
 
@@ -77,3 +160,14 @@ On voit bien sur cet exemple les difficultés des généralisations philosophiqu
 ** Grothendieck
 Les catégories de préfaisceaux sont parfaites : On peut faire des maths/de la logique dedans comme quand on travaille avec des ensembles (presque : logique constructiviste)
 Leurs seuls défauts : Elles sont trop grosses... Beaucoup beaucoup. Exemple si on prend la catégorie des ouverts d'un espace topologique, un préfaisceau est la donnée pour chacun de ces ouverts d'un ensemble + restrictions. C'est bien trop vaste pour qu'on puisse le voir comme "une généralisation des ouverts de l'espace topologique"
+
+
+* Enoncé propre                                                       :Bonus:
+There is a contravariant version of Yoneda's lemma, which concerns contravariant functors from $C$ to $Set$. This version involves the contravariant hom-functor
+\[
+h_A = \mathrm{Hom}(-, A),
+\]
+which sends $X$ to the hom-set $Hom(X,A)$. Given an arbitrary contravariant functor $G$ from $C$ to $Set$, Yoneda's lemma asserts that
+\[
+\mathrm{Nat}(h_A,G) \cong G(A). 
+\]

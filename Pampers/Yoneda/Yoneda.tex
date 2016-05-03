@@ -1,0 +1,210 @@
+% Created 2016-05-03 mar. 10:16
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Avatars du lemme de Yoneda}
+\author{Basile Pillet}
+\date{\today}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs Org-mode version 7.9.3f}}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace*{1cm}
+
+
+\textit{2016-05-06 Thu 13:00}
+
+\section{Avatars}
+\label{sec-1}
+\subsection{Théorème de Cayley}
+\label{sec-1-1}
+\subsubsection{Enoncé}
+\label{sec-1-1-1}
+\subsubsection{\textbf{DONE} Version représentations/actions de groupes}
+\label{sec-1-1-2}
+
+Une représentation de $G$ est la donnée d'un ensemble $E$ et pour tout $g \in G$ d'une bijection $E(g)$ de $E$.
+
+Un morphisme de représentation $\phi$ entre $E$ et $F$ est la donnée pour tout $g \in G$ d'une application $\phi_g : E \to F$ tel que le diagramme commute : $F(g) \circ \phi_g = \phi_g \circ E(g)$
+
+Le lemme de Yoneda nous associe à chaque élément de $G$ un morphisme de représentation entre G$_{\mathrm{gauche}}$ et lui-même, qui se trouve être un automorphisme et induit donc une bijection de $|G|$.
+\subsubsection{Enoncé monoïde}
+\label{sec-1-1-3}
+\subsection{Un théorème de logique propositionelle}
+\label{sec-1-2}
+\subsubsection{Enoncé}
+\label{sec-1-2-1}
+
+(3)   (∀X, (X ⇒ A) ⇒ (X ⇒ B)) entraine A ⇒ B
+\subsubsection{Preuve}
+\label{sec-1-2-2}
+
+On considère la catégorie des formules du premier ordre bien formées en les variables propositionelles A, B, · · · Dont les flèches sont les implications sémantiques.
+
+Le faisceau représentable de A est l’ensemble des X tels que (X ⇒ A).
+
+Un morphisme de faisceau entre F et G est la donnée pour tout A d’une application F (A) → G(A) naturelle en A.
+L’hypothèse de (3) se traduit par l’implication X ∈ Aˆ ⇒ X ∈ Bˆ d'où l'inclusion Aˆ< Bˆ donc A ∈ Bˆ donc A ⇒ B.
+\subsection{Rentrer dans les ordres}
+\label{sec-1-3}
+\subsubsection{Enoncé}
+\label{sec-1-3-1}
+
+Soit (E, ≤) un ensemble totalement ordonné. À x on associe I(x) : l’ensemble des éléments inférieurs à x.
+
+Et comme l’ordre est total si I(x) = I(y), alors x = y
+
+De plus, considérons E' l’ensemble des J ⊆ E tels que si x ∈ J et y ≤ x alors
+y ∈ J. Ainsi E' est l’ensemble des parties de E ``stables par inférieur''.
+
+Les résultats précédents nous dises que E s’injecte dans E' .
+
+On a de plus un ordre sur E' qui étend celui de E : J ≤ K ssi J ⊂ K.
+\subsubsection{Compléter Q}
+\label{sec-1-3-2}
+
+Dans le cas E = Q munit de l’ordre usuel, on a des elements de E' qui ne correspondent pas à des I(x) pour x ∈ Q.
+
+Exemple : J = \{y ∈ Q | y 2 ≤ 2 \} n’est pas de la forme I(x), mais est bien un élément de E' .
+
+Prenons un élément J de E' , c’est une partie de Q donc de R, par suite elle est soit vide soit admet une borne supérieure finie ou infinie. Si elle admet une borne supérieure x, alors elle est de la forme \{y ∈ Q | y ≤ x\}.
+On notera −∞ la partie vide de Q et +∞ la partie pleine.
+Alors la distinction ci-dessus montre que E = R ∪ \{±∞\}, avec l’ordre naturel.
+
+Remarque à Tristan, R n’est peut-être pas naturel, mais $\bar\R$ oui
+\subsection{Propriété universelle}
+\label{sec-1-4}
+
+Toute propriété universelle convient
+Le ``il existe un unique [morphisme]'' provient du lemme de Yoneda.
+\subsubsection{Exemple (un peu original)}
+\label{sec-1-4-1}
+
+The field of fractions $K$ of $R$ is characterised by the following universal property: if $h:R\rightarrow F$ is an injective ring homomorphism from $R$ into a field $F$, then there exists a unique ring homomorphism $g:K\rightarrow F$ which extends $h$.
+\subsection{\textbf{DONE} Ev et Evns \textbf{:DUAL:}}
+\label{sec-1-5}
+\subsubsection{Yoneda}
+\label{sec-1-5-1}
+
+Dès qu'on a une notion de dualité, on a toujours un morphisme naturel $E \to Bidual(E)$. Ça peut paraître peu, mais le mot naturel n'est pas à prendre à la légère. Il entraîne en particulier que cette application est presque toujours injective. Et si elle ne l'est pas elle est triviale en un certain sens.
+\subsubsection{Exemples}
+\label{sec-1-5-2}
+
+\begin{itemize}
+\item Ev
+\item Evn
+\item Evt (avec flèche nulle si les evt ne sont pas localement convexes)
+\item Dual abélien d'un groupe (Hom(G,Z)), avec morphisme trivial sur les éléments de torsion.
+\end{itemize}
+\subsubsection{Adjonctions}
+\label{sec-1-5-3}
+
+$E \to E^{**}$ unité d'une adjonction donc élément universel parmis les transformations naturelles $id \to bidual$
+
+cf. \href{https://ncatlab.org/nlab/show/adjunction}{Adjunction in ncatlab}
+\subsection{\textbf{TODO} L1loc \textbf{:DUAL:}}
+\label{sec-1-6}
+
+
+``A locally integrable function on an open domain is determined by the knowledge of the values of the integrals against test functions''
+\section{Philosophie(s)}
+\label{sec-2}
+
+
+Les flèches * -> A sont exactement les éléments de A.
+L'ensemble des flèches B -> A donc noté Hom(B,A), représente donc les B-points de A. Une forme généralisée de points.
+\subsection{\textbf{DONE} Complétion : Le truc qui contient tous les autres}
+\label{sec-2-1}
+\subsubsection{Exemple catégorie qui n'est pas (co-)complète : Catégorie des corps.}
+\label{sec-2-1-1}
+
+Un produit de corps n'est pas forcément un corps.
+Un préfaisceau de corps est la donnée pour tout sous-corps d'un ensemble qui respectent les inclusions.
+Ces inclusions forment un $G$-ensemble sous l'action d'un groupe (Automorphismes/Galois)
+\subsubsection{Meilleur exemple : La catégorie des anneaux}
+\label{sec-2-1-2}
+
+Si on la voit comme un catégorie enrichie sur les $\Z$-modules (préadditive) et qu'on prend les foncteurs qui correspondent, alors la catégorie des préfaisceaux est celles des Modules-à-droite-sur-un-anneaux, et l'énoncé de Yoneda donne (pour tout M, R-module à droite)
+\[
+M \simeq Hom_{R}(R,M)
+\]
+La catégorie des modules est abélienne (mieux que préadittive)
+\subsubsection{Autre exemple : Ouverts d'un espace topologique.}
+\label{sec-2-1-3}
+
+Il y a un ensemble vide (initial) et un ensemble plein (terminal) mais une intersection quelconque d'ouverts n'existe pas toujours dans la catégorie des ouverts. Ça peut par exemple être un singleton. Mais du point de vue de la catégorie, elle voit que les ouverts dedans (ie vide). Ainsi même si notre topologie est assez fine pour repérer les points, la catégorie associée ne les voit pas.
+Par contre la catégorie des (pré-)faisceaux oui : avec les faisceaux gratte-ciel
+\subsection{\textbf{TODO} Faire agir les structures mathématiques sur elles-meme}
+\label{sec-2-2}
+\subsection{Platonicisme}
+\label{sec-2-3}
+
+> Un objet c d'une catégorie est entièrement décris par Hom(_,c)
+
+C'est-à-dire connaitre un objet c'est savoir comment il interragit avec les autres.
+\subsubsection{En physique}
+\label{sec-2-3-1}
+
+\begin{quote}
+You work at a particle accelerator. You want to understand some particle. All you can do are throw other particles at it and see what happens. If you understand how your mystery particle responds to all possible test particles at all possible test energies, then you know
+everything there is to know about your mystery particle.  -- Ravi Vakil
+\end{quote}
+
+Mettons qu'on travaille dans un accélérateur de particules. On veut comprendre une nouvelle particule. Tout ce qu'on peut faire c'est lancer d'autres particules dessus et observer ce qu'il se passe. Si on comprend comment notre particule mystérieuse réagit à chaque particule test qu'on lui lance à chaque niveau d'énergie possible, alors on sait tout ce qu'il y a savoir sur notre particule mystérieuse
+\subsubsection{Caverne de Platon}
+\label{sec-2-3-2}
+
+La réalité n'est déterminé que par l'ensemble des projections dont on dispose.
+
+\begin{quote}
+lorsque tu travailles sur un objet géométrique, par exemple une sphère, tu n’imagines jamais l’objet intrinsèquement, tu le vois toujours comme plongé dans un R$^n$ , tu regardes les fonctions dessus, et même lorsque tu l’observes tu en fais des projections sur ta rétine, donc tu ne considère jamais l’objet intrinsèquement mais que les fonctions sur celui ci. -- Aurélien Sagnier
+\end{quote}
+
+Cependant
+\begin{quote}
+Ce lemme a inspiré nombre de gloses et d’interprétations. L’interprétation perspectiviste, qui énonce qu’« un objet s’identifie à l’intégrale des points de vue sur cet objet », est éclairante, mais guère rigoureuse : il faudrait en effet convenir que les « points de vue » réciproques sont les morphismes de la catégorie que l’on considère ; or il semble difficile d’admettre que la composition d’un point de vue de A sur B avec un point de vue de B sur C détermine un point de vue de A sur C, comme il serait requis dans une catégorie\ldots{}
+
+On voit bien sur cet exemple les difficultés des généralisations philosophiques d’énoncés mathématiques, qui ne laissent pas d’être éclairantes en dépit de leurs incohérences en tant qu’interprétations.
+
+[\ldots{}Il faut aussi\ldots{}] insister sur le fait que le point de vue de l’objet sur lui-même, crucial dans la démonstration du lemme, fait partie de l’intégrale, ce qui censure bien des gloses abusives.
+\end{quote}
+\subsection{Grothendieck}
+\label{sec-2-4}
+
+Les catégories de préfaisceaux sont parfaites : On peut faire des maths/de la logique dedans comme quand on travaille avec des ensembles (presque : logique constructiviste)
+Leurs seuls défauts : Elles sont trop grosses\ldots{} Beaucoup beaucoup. Exemple si on prend la catégorie des ouverts d'un espace topologique, un préfaisceau est la donnée pour chacun de ces ouverts d'un ensemble + restrictions. C'est bien trop vaste pour qu'on puisse le voir comme ``une généralisation des ouverts de l'espace topologique''
+\section{Enoncé propre}
+\label{sec-3}
+
+There is a contravariant version of Yoneda's lemma, which concerns contravariant functors from $C$ to $Set$. This version involves the contravariant hom-functor
+\[
+h_A = \mathrm{Hom}(-, A),
+\]
+which sends $X$ to the hom-set $Hom(X,A)$. Given an arbitrary contravariant functor $G$ from $C$ to $Set$, Yoneda's lemma asserts that
+\[
+\mathrm{Nat}(h_A,G) \cong G(A). 
+\]
+
+\end{document}
