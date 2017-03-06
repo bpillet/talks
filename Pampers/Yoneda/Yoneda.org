@@ -90,7 +90,7 @@ $E \to E^{**}$ unité d'une adjonction donc élément universel parmis les trans
 
 cf. [[https://ncatlab.org/nlab/show/adjunction][Adjunction in ncatlab]]
 
-** TODO L1loc                                                         :DUAL:
+** DONE L1loc                                                         :DUAL:
 
 "A locally integrable function on an open domain is determined by the knowledge of the values of the integrals against test functions"
 
@@ -125,7 +125,7 @@ Par contre la catégorie des (pré-)faisceaux oui : avec les faisceaux gratte-ci
 **** Représentable
 Truc de la catégorie complété qui provient en fait de la petite catégorie de départ.
 
-** TODO Faire agir les structures mathématiques sur elles-meme
+** DONE Faire agir les structures mathématiques sur elles-meme
 
 
 ** Platonicisme
