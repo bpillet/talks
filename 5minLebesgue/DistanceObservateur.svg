@@ -15,7 +15,7 @@
    id="svg3017"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="Nouveau document 1">
+   sodipodi:docname="DistanceObservateur.svg">
   <defs
      id="defs3019">
     <linearGradient
@@ -89,7 +89,7 @@
      id="layer1"
      transform="translate(-35.21875,-7.5625)">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#999999;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 8;stroke-dashoffset:0"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 8;stroke-dashoffset:0"
        id="rect3957"
        width="742.85712"
        height="437.14285"
@@ -268,7 +268,7 @@
        sodipodi:cy="222.08482"
        sodipodi:rx="3.5714285"
        sodipodi:ry="9.6428576"
-       d="m 98.571429,222.08482 a 3.5714285,9.6428576 0 1 1 -7.142858,0 3.5714285,9.6428576 0 1 1 7.142858,0 z"
+       d="m 98.571429,222.08482 c 0,5.32561 -1.598983,9.64286 -3.571429,9.64286 -1.972446,0 -3.571429,-4.31725 -3.571429,-9.64286 0,-5.3256 1.598983,-9.64285 3.571429,-9.64285 1.972446,0 3.571429,4.31725 3.571429,9.64285 z"
        transform="translate(39.21875,7.5625)" />
     <path
        style="fill:url(#linearGradient3970);stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"

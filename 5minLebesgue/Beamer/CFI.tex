@@ -1,5 +1,6 @@
 \documentclass[12pt]{beamer}% version imprimable avec notes d’orateur, handout
-\usepackage[couleur]{/home/basile/Latex/Headfiles/dipneuste}
+\usepackage[couleur]{/home/basile/Git/Latex/Headfiles/dipneuste}
+%\usepackage[couleur]{/home/basile/Latex/Headfiles/dipneuste}
 \usepackage{pgfpages}
 \uselanguage{French}
 \languagepath{French}
@@ -34,8 +35,7 @@
 
 
 \setbeamertemplate{note page}[plain]
-
-
+\setbeamertemplate{navigation symbols}{}
 
 
 
@@ -54,12 +54,75 @@
 \end{frame}
 
 
+\newgeometry{margin=0pt}
+
 \begin{frame}% POSSIBLE LOCALEMENT
 \begin{center}
+\note{On part de notre objet impossible}
 \includegraphics<1>[scale=.4]{../Images/tribar.pdf}
+\note{Si on ne regarde que le coin en haut à gauche ...}
 \includegraphics<2>[scale=.4]{../Images/UpperCorner.pdf}
+\note{... on remarque qu'il n'a plus rien d'impossible !}
 \includegraphics<3>[scale=.4]{../Images/UpperCorner2.pdf}
+\note{On peut le réaliser en vrai avec deux bouts de bois et un peu de colle}
+\includegraphics<4>[scale=.4]{../Images/UpperCorner3.pdf}
 \end{center}
+\end{frame}
+
+
+\begin{frame}% Recouvrement
+\begin{center}
+\note{Revenons à notre tribarre ou plutôt son dessin}
+\includegraphics<1>[scale=.4]{../Images/tribar.pdf}
+\note{On peut découper ce dessin en trois parties autour de chaque coin.}
+\includegraphics<2>[scale=.4]{../Images/Covering.pdf}
+\note{...parties qui s'intersectent}
+\includegraphics<3>[scale=.4]{../Images/Covering2.pdf}
+\end{center}
+\end{frame}
+
+
+\begin{frame}% Split
+\begin{center}
+\note{Éclatons donc notre dessin. On a trois dessins qui chacun représente des objets RÉALISABLES}
+\includegraphics<1>[scale=.4]{../Images/Covering_split.pdf}
+\note{Ces trois dessins doivent être recollés suivant les zones rouges pour montrer obtenir le dessin d'origine.}
+\note{Notre figure impossible est LOCALEMENT possible. Mais si les trois dessins peuvent se recoller pour donner le dessin de la tribarre, les trois objets physiques eux ne peuvent pas ! C'est ce qu'on va voir.}
+\end{center}
+\end{frame}
+
+
+\begin{frame}% Notations
+\begin{center}
+\note{Appelons $U_1$, $U_2$ et $U_3$ les trois parties qui recouvrent le dessin. Prenons un point $A$ sur le dessin qui soit à la fois dans $U_1$ et $U_2$}
+\includegraphics<1>[scale=.4]{../Images/A.pdf}
+\note{Après découpage, le point $A$ se dédouble : une copie $A_{12}$ dans $U_1$ et une copie $A_{21}$ dans $U_2$}
+\includegraphics<2>[scale=.4]{../Images/Aij.pdf}
+\end{center}
+\end{frame}
+
+
+\begin{frame}% Distance observateur
+\begin{center}
+\note{
+Si maintenant on construit un coin numéro $1$, il aura une certain taille. Et pour qu'il apparaisse tel que sur le dessin, il faut le mettre à une certaine distance de l'observateur. Si on l'avait construit plus petit, il aurait fallu le mettre plus près.
+}
+\includegraphics<1>[scale=.5]{../Images/DistanceObservateur.pdf}
+\note{
+Mais le coin numéro $2$ n'est pas forcément à la même distance de l'observateur. Imaginez que l'on construise l'objet $1$ immense mais très loin et l'objet $2$ petit mais très près.
+}
+\includegraphics<2>[scale=.4]{../Images/1Loin2Pres.pdf}
+\end{center}
+\end{frame}
+
+
+\begin{frame}% Dij
+\note{
+Pour garder cette information en mémoire, on va noter
+}
+\begin{equation*}
+d_{12} = \dfrac{\text{ distance du point }A_{12}\text{ à l'observateur}}{\text{ distance du point }A_{21}\text{ à l'observateur}}
+\end{equation*}
 \end{frame}
 
 \iffalse
