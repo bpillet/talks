@@ -96,8 +96,8 @@
 \begin{center}
 \note{Appelons $U_1$, $U_2$ et $U_3$ les trois parties qui recouvrent le dessin. Prenons un point $A$ sur le dessin qui soit à la fois dans $U_1$ et $U_2$}
 \includegraphics<1>[scale=.4]{../Images/A.pdf}
-\note{Après découpage, le point $A$ se dédouble : une copie $A_{12}$ dans $U_1$ et une copie $A_{21}$ dans $U_2$}
-\includegraphics<2>[scale=.4]{../Images/Aij.pdf}
+\note{Après découpage, le point $A$ se dédouble : une copie $A_{1}$ dans $U_1$ et une copie $A_{2}$ dans $U_2$}
+\includegraphics<2>[scale=.4]{../Images/Ai.pdf}
 \end{center}
 \end{frame}
 
@@ -111,7 +111,7 @@ Si maintenant on construit un coin numéro $1$, il aura une certain taille. Et p
 \note{
 Mais le coin numéro $2$ n'est pas forcément à la même distance de l'observateur. Imaginez que l'on construise l'objet $1$ immense mais très loin et l'objet $2$ petit mais très près.
 }
-\includegraphics<2>[scale=.4]{../Images/1Loin2Pres.pdf}
+\includegraphics<2>[scale=.4]{../Images/1Loin2Pres_.pdf}
 \end{center}
 \end{frame}
 
@@ -121,9 +121,258 @@ Mais le coin numéro $2$ n'est pas forcément à la même distance de l'observat
 Pour garder cette information en mémoire, on va noter
 }
 \begin{equation*}
-d_{12} = \dfrac{\text{ distance du point }A_{12}\text{ à l'observateur}}{\text{ distance du point }A_{21}\text{ à l'observateur}}
+d_{12} = \dfrac{\text{ distance du point représenté par }A_{1}\text{ à l'observateur}}{\text{ distance du point représenté par }A_{2}\text{ à l'observateur}}
 \end{equation*}
 \end{frame}
+
+\begin{frame}% 6 points
+\begin{center}
+\note{
+On recommence avec un point $B$ sur l'intersection de $U_1$ et $U_3$ et un point $C$ sur l'intersection de $U_2$ et $U_3$
+}
+\includegraphics<1>[scale=.4]{../Images/6points.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}% Dij
+\begin{center}
+\begin{equation*}
+d_{13} = \dfrac{\text{ distance du point représenté par }B_{1}\text{ à l'observateur}}{\text{ distance du point représenté par }B_{3}\text{ à l'observateur}}
+\end{equation*}
+\begin{equation*}
+d_{23} = \dfrac{\text{ distance du point représenté par }C_{2}\text{ à l'observateur}}{\text{ distance du point représenté par }C_{3}\text{ à l'observateur}}
+\end{equation*}
+\end{center}
+\end{frame}
+
+
+\begin{frame}% Recollement
+\begin{center}
+\frametitle{\hfill Recollement}
+À quelle(s) condition(s) les trois objets construits se recollent-t-ils ? \pause
+
+\bigskip
+Il faut
+\medskip
+\begin{itemize}[<+->]
+\item que $A_1$ et $A_2$ se superposent \uncover<5->{ : \quad  $d_{12} = 1$}
+\item que $B_1$ et $B_3$ se superposent \uncover<6->{ :  \quad   $d_{13} = 1$}
+\item que $C_2$ et $C_3$ se superposent \uncover<7->{ :  \quad   $d_{23} = 1$}
+\end{itemize}
+\end{center}
+\end{frame}
+
+
+\begin{frame}% inception
+\begin{center}
+\note{
+Ces conditions sont nécessaire pour que l'objet existe réellement. Sinon on pourrait avoir des problèmes comme dans le film Inception. 
+}
+\vspace*{-1.9em}
+\includegraphics<1>[width=1.1 \paperwidth]{../Images/Inception.jpg}
+\hspace*{-8em}\includegraphics<2>[width=1.8 \paperwidth]{../Images/Inception2.jpg}
+\end{center}
+\end{frame}
+
+\section{Homothétie}
+
+\begin{frame}% Homothétie
+\begin{center}
+\note{Que voyons-nous ?}
+\includegraphics<1>[scale=.4]{../Images/ABC.pdf}
+\includegraphics<2>[scale=.4]{../Images/d12d23d13.pdf}
+\only<3>{Les $d_{ij}$ forment un \textbf{cocycle}.}
+\note{C'est l'information importante sur cette construction.}
+\end{center}
+\end{frame}
+
+\begin{frame}% Homothétie 2
+\begin{center}
+\only<1>{Que ce passe-t-il si on multiplie toutes les dimensions de l'objet $1$ par $\lambda_1 \in \R^{+*}$ ainsi que sa distance à l'observateur ?}
+\note{Rien ne change}
+\includegraphics<2>[scale=.4]{../Images/ABC.pdf}
+\end{center}
+\end{frame}
+
+
+\begin{frame}% Homothétie 2
+\begin{center}
+\note{Cependant}
+\begin{align*}
+d_{12} & \mapsto \uncover<2->{\lambda_1 d_{12}} \\[2em]
+d_{13} & \mapsto \uncover<3->{\lambda_1 d_{13}} \\[2em]
+d_{23} & \mapsto \uncover<4->{d_{23}}
+\end{align*}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}% Homothétie 2
+\begin{center}
+Il existe une manière de redimensionner les trois objets de tel sorte que $d_{12} = d_{13} = d_{23} = 1$ \pause\\
+( et donc de recoller les trois object en une tribarre )\\
+\bigskip\pause
+si et seulement si\\
+\bigskip\pause
+\begin{equation*}
+d_{12} = \dfrac{\lambda_1}{\lambda_2} \quad , \qquad d_{13} = \dfrac{\lambda_1}{\lambda_3} \quad  , \qquad d_{23} = \dfrac{\lambda_2}{\lambda_3}
+\end{equation*}
+\pause
+\bigskip
+on dit alors que les $d_{ij}$ forment un \textbf{cobord}.
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\begin{center}
+Si c'est le cas alors
+\[
+d_{12} \times d_{23} = \pause
+\dfrac{\lambda_1}{\lambda_2} \times \dfrac{\lambda_2}{\lambda_3} = \pause
+\dfrac{\lambda_1}{\lambda_3} = \pause
+d_{13}
+\]
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\note{Si l'on regarde l'ensemble des triplet $d_{12},d_{13}, d_{23}$ mais qu'on force ceux qui s'écrivent comme des quotients de $\lambda_i$ à s'annuler on a construit un objet de ce qu'on appelle \textbf{espace de cohomologie}}
+\[
+H^1(U, \R^{+*}) = \dfrac{\left\{\text{triplets }(d_{12},d_{13}, d_{23})\right\}}{\left\{\text{triplets }(d_{12},d_{13}, d_{23}) \text{ tels que }d_{ij} = \lambda_i/\lambda_j\right\}}
+\]
+La construction des
+\end{center}
+\end{frame}
+\section{Contradiction}
+
+\begin{frame}% Contradiction
+\begin{center}
+\includegraphics<1>[scale=.4]{../Images/ABC.pdf}
+\includegraphics<2>[scale=.4]{../Images/A1<B1.pdf}
+\only<3,5,7>{
+\[
+\text{distance}(A_1) < \text{distance}(B_1)
+\]}
+\includegraphics<4>[scale=.4]{../Images/B3<C3.pdf}
+\only<5,7>{
+\[
+\text{distance}(B_3) < \text{distance}(C_3)
+\]}
+\includegraphics<6>[scale=.4]{../Images/A2>C2.pdf}
+\only<7>{
+\[
+\text{distance}(A_2) > \text{distance}(C_2)
+\]}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{align*}
+d_{12} \times d_{23} &= \dfrac{\text{distance}(A_1)}{\text{distance}(A_2)} \times \dfrac{\text{distance}(C_2)}{\text{distance}(C_3)}\\
+\uncover<2->{&< \dfrac{\text{distance}(A_1)}{\text{distance}(C_2)} \times \dfrac{\text{distance}(C_2)}{\text{distance}(C_3)}\\ }
+\uncover<3->{&< \dfrac{\text{distance}(A_1)}{\text{distance}(C_3)}\\  }
+\uncover<4->{&< \dfrac{\text{distance}(B_1)}{\text{distance}(C_3)}\\  }
+\uncover<5->{&< \dfrac{\text{distance}(B_1)}{\text{distance}(B_3)}\\  }
+\uncover<6->{&< d_{13} }\\
+\end{align*}
+\pause
+La tribarre n'existe pas.
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\begin{center}
+\note{L'intérêt n'est pas de montrer que la tribarre est impossible ! L'intérêt c'est qu'en mathématique (en algèbre et en géométrie), quand quelque chose ne marche pas, eh bien la vie ne s'arrête pas. Il y a des choses qui empêchent que ça marche et l'étude de ces obstructions se révèle bien souvent très riche}\vspace*{-2.5em}
+\hspace*{-6em}\includegraphics<1>[scale=.87]{../Images/lego-triangle.jpg}
+\end{center}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \iffalse
 \section{L'espace de Cantor}
