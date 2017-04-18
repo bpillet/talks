@@ -1,5 +1,6 @@
 \documentclass[12pt]{beamer}% version imprimable avec notes d’orateur, handout
-\usepackage[couleur]{/home/basile/Git/Latex/Headfiles/dipneuste}
+%\usepackage[couleur]{/home/basile/Git/Latex/Headfiles/dipneuste}
+\usepackage[couleur]{/home/basile/Latex/Headfiles/dipneuste}
 %\usepackage[orientation=portrait,size=A4]{beamerposter}
 %\usepackage[couleur]{/home/basile/Latex/Headfiles/dipneuste}
 \usepackage{pgfpages}
@@ -157,9 +158,10 @@ d_{23} = \dfrac{\text{ distance du point représenté par }C_{2}\text{ à l'obse
 \begin{center}
 \frametitle{\hfill Recollement}
 \nota{À quelle(s) condition(s) les trois objets construits se recollent-t-ils ?}
-Pour se recoller \pause
+Pour se recoller \\
+\pause
 \bigskip
-Il faut \nota{Il faut}
+il faut \nota{Il faut}
 \medskip
 \begin{itemize}[<+->]
 \item que $A_1$ et $A_2$ se superposent \nota{que $A_1$ et $A_2$ se superposent ... donc qu'ils soient à la même distance de l'observateur} \uncover<5->{ : \quad  $d_{12} = 1$} \nota{... donc que le rapport $d_{12}$ vaille $1$.}
@@ -237,7 +239,11 @@ on dit alors que les $d_{ij}$ forment un \textbf{cobord}.
 
 
 \begin{frame}
-\nota{Donc le \textit{triangle de Penrose} existe si et seulement si les $d_{ij}$ forment un cobord.}
+  \frametitle{\hfill Le \textit{triangle de Penrose} existe \\
+    \hfill ssi\\
+    \hfill les $d_{ij}$ forment un cobord}
+  \nota{Donc le \textit{triangle de Penrose} existe si et seulement si les $d_{ij}$ forment un cobord.}
+  \pause
 \begin{center}
 Si c'est le cas alors
 \[
@@ -249,16 +255,19 @@ d_{13}
 \end{center}
 \end{frame}
 
+\iffalse
 \begin{frame}
 \begin{center}
 \nota{Si l'on regarde l'ensemble des triplet $d_{12},d_{13}, d_{23}$ mais qu'on force ceux qui s'écrivent comme des quotients de $\lambda_i$ à s'annuler on a construit un objet de ce qu'on appelle \textbf{espace de cohomologie}}
 \[
 H^1(U, \R^{+*}) = \dfrac{\left\{\text{triplets }(d_{12},d_{13}, d_{23})\right\}}{\left\{\text{triplets }(d_{12},d_{13}, d_{23}) \text{ tels que }d_{ij} = \lambda_i/\lambda_j\right\}}
 \]
-
 \end{center}
 \end{frame}
+\fi
+
 \section{Contradiction}
+
 
 \begin{frame}% Contradiction
 \nota{On va montrer que c'est absurde}
@@ -297,8 +306,8 @@ d_{13} &= d_{12} \times d_{23}\\
 \uncover<6->{&< \dfrac{\text{distance}(B_1)}{\text{distance}(B_3)}\\  }
 \uncover<7->{&< d_{13} }\\
 \end{align*}
-\pause
-Le \textit{triangle de Penrose} n'existe pas.
+
+\uncover<8->{Le \textit{triangle de Penrose} n'existe pas.}
 \end{center}
 \end{frame}
 
