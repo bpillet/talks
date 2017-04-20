@@ -313,6 +313,26 @@ d_{13} &= d_{12} \times d_{23}\\
 
 
 \begin{frame}
+\nota{En regroupant tout ça}
+\begin{center}
+\begin{align*}
+  d_{13} \times \text{distance}(C_3) \only<1>{ &= d_{12} \times d_{23} \times \text{distance}(C_3)\\  \note[item]{Condition de cocycle}}
+\only<2>{&= d_{12} \times \dfrac{\text{distance}(C_2)}{\text{distance}(C_3)}\times \text{distance}(C_3)\\ }
+\uncover<3->{&=  d_{12} \times\text{distance}(C_2)\\ }
+\only<4>{&<  d_{12} \times\text{distance}(A_2)\\  \note[item]{Car $C_2$ est plus proche que $A_2$}}
+\only<5>{&<  \dfrac{\text{distance}(A_1)}{\text{distance}(A_2)}\times\text{distance}(A_2)\\  \note[item]{Car $C_2$ est plus proche que $A_2$}}
+\uncover<6->{&< \text{distance}(A_1)\\  }
+\only<7>{&< \text{distance}(B_1)\\  }
+\only<8>{&< \dfrac{\text{distance}(B_1)}{\text{distance}(B_3)}\text{distance}(B_3)\\  }
+\uncover<9->{&< d_{13} \times \distance{B_3} \\}
+\uncover<10->{&< d_{13} \times \distance{C_3} \\ \note[item]{Car $B_3$ est plus proche que $C_3$.}
+\end{align*}
+
+\uncover<11->{Le \textit{triangle de Penrose} n'existe pas.}
+\end{center}
+\end{frame}
+
+\begin{frame}
 \begin{center}
 \nota{L'intérêt n'est pas de montrer que le \textit{triangle de Penrose} est impossible ! L'intérêt c'est qu'en mathématique (en algèbre et en géométrie), quand quelque chose ne marche pas, eh bien la vie ne s'arrête pas. Il y a \textbf{des choses}, de nouveaux objets, qui empêchent que ça marche et l'étude de ces \textbf{obstructions} se révèle bien souvent très riche}\vspace*{-2.5em}
 \hspace*{-6em}\includegraphics<1>[scale=.87]{../Images/lego-triangle.jpg}
