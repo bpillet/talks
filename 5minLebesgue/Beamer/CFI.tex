@@ -113,7 +113,7 @@
 \nota{
 Si maintenant on construit un coin numéro $1$, il aura une certain taille. Et pour qu'il apparaisse tel que sur le dessin, il faut le mettre à une certaine distance de l'observateur. Si on l'avait construit plus petit, il aurait fallu le mettre plus près.
 }
-\includegraphics<1>[scale=.5]{../Images/DistanceObservateur.pdf}
+\includegraphics<1>[scale=.5]{../Images/DistanceObservateur2.pdf}
 \nota{
 Mais le coin numéro $2$ n'est pas forcément à la même distance de l'observateur. Imaginez que l'on construise l'objet $1$ immense mais très loin et l'objet $2$ petit mais très près.
 }
@@ -127,7 +127,7 @@ Mais le coin numéro $2$ n'est pas forcément à la même distance de l'observat
 Pour garder cette information en mémoire, on va noter $d_{12}$ le rapport des distances entre ces deux points.
 }
 \begin{equation*}
-d_{12} = \dfrac{\text{ distance du point représenté par }A_{1}\text{ à l'observateur}}{\text{ distance du point représenté par }A_{2}\text{ à l'observateur}}
+d_{12} = \alt<2>{\dfrac{OA_1}{OA_2}}{\dfrac{\text{ distance du point représenté par }A_{1}\text{ à l'observateur}}{\text{ distance du point représenté par }A_{2}\text{ à l'observateur}}}
 \end{equation*}
 \end{frame}
 
@@ -141,14 +141,17 @@ On recommence avec un point $B$ sur l'intersection de $U_1$ et $U_3$ et un point
 \end{frame}
 
 \begin{frame}% Dij
-\nota{On définit de même entre l'objet $1$ et l'objet $3$ le rapport $d_{13}$}
 \begin{center}
 \begin{equation*}
-d_{13} = \dfrac{\text{ distance du point représenté par }B_{1}\text{ à l'observateur}}{\text{ distance du point représenté par }B_{3}\text{ à l'observateur}}
+d_{12} = \dfrac{OA_1}{OA_2}
 \end{equation*}
-\nota{et le rapport $d_{23}$}
+\nota{On définit de même entre l'objet $1$ et l'objet $3$ le rapport $d_{31}$}\pause
 \begin{equation*}
-d_{23} = \dfrac{\text{ distance du point représenté par }C_{2}\text{ à l'observateur}}{\text{ distance du point représenté par }C_{3}\text{ à l'observateur}}
+d_{31} = \dfrac{OB_{3}}{OB_{1}}
+\end{equation*}
+\nota{et le rapport $d_{23}$}\pause
+\begin{equation*}
+d_{23} = \dfrac{OC_{2}}{OC_{3}}
 \end{equation*}
 \end{center}
 \end{frame}
@@ -164,9 +167,10 @@ Pour se recoller \\
 il faut \nota{Il faut}
 \medskip
 \begin{itemize}[<+->]
-\item que $A_1$ et $A_2$ se superposent \nota{que $A_1$ et $A_2$ se superposent ... donc qu'ils soient à la même distance de l'observateur} \uncover<5->{ : \quad  $d_{12} = 1$} \nota{... donc que le rapport $d_{12}$ vaille $1$.}
-\item que $B_1$ et $B_3$ se superposent \uncover<6->{ :  \quad   $d_{13} = 1$}
-\item que $C_2$ et $C_3$ se superposent \uncover<7->{ :  \quad   $d_{23} = 1$}
+\item que $A_1$ et $A_2$ se superposent\nota{que $A_1$ et $A_2$ se superposent ... donc qu'ils soient à la même distance de l'observateur}%
+\uncover<5->{ : \quad  $d_{12} = 1$} \nota{... donc que le rapport $d_{12}$ vaille $1$.}
+\item que $B_1$ et $B_3$ se superposent\uncover<6->{ :  \quad  $d_{31} = 1$}
+\item que $C_2$ et $C_3$ se superposent\uncover<7->{ :  \quad  $d_{23} = 1$}
 \end{itemize}
 \end{center}
 \end{frame}
@@ -189,7 +193,7 @@ Ces conditions sont nécessaire pour que l'objet existe réellement. Sinon on po
 \begin{center}
 \nota{Que voyons-nous ?}
 \includegraphics<1|handout:0>[scale=.4]{../Images/ABC.pdf}
-\includegraphics<2>[scale=.4]{../Images/d12d23d13.pdf}
+\includegraphics<2>[scale=.4]{../Images/d12d23d31.pdf}
 \only<3>{Les $d_{ij}$ forment un \textbf{cocycle}.}
 \nota{C'est l'information importante sur cette construction.}
 \end{center}
@@ -209,7 +213,7 @@ Ces conditions sont nécessaire pour que l'objet existe réellement. Sinon on po
 \nota{Cependant}
 \begin{align*}
 d_{12} & \mapsto \uncover<2->{\lambda_1 d_{12}} \\[2em]
-d_{13} & \mapsto \uncover<3->{\lambda_1 d_{13}} \\[2em]
+d_{31} & \mapsto \uncover<3->{\dfrac{d_{31}}{\lambda_1}} \\[2em]
 d_{23} & \mapsto \uncover<4->{d_{23}}
 \end{align*}
 \end{center}
@@ -222,14 +226,14 @@ d_{23} & \mapsto \uncover<4->{d_{23}}
 \begin{center}
 Il existe une manière de redimensionner les trois objets telle que 
 \[
-d_{12} = d_{13} = d_{23} = 1
+d_{12} = d_{23}= d_{31}  = 1
 \] \pause
 ( c'est-à-dire de recoller les trois coins en un vrai \textit{triangle de Penrose} )\\
 \bigskip\pause
 si et seulement si\\
 \bigskip\pause
 \begin{equation*}
-d_{12} = \dfrac{\lambda_1}{\lambda_2} \quad , \qquad d_{13} = \dfrac{\lambda_1}{\lambda_3} \quad  , \qquad d_{23} = \dfrac{\lambda_2}{\lambda_3}
+d_{12} = \dfrac{\lambda_1}{\lambda_2} \quad , \qquad d_{31} = \dfrac{\lambda_3}{\lambda_1} \quad  , \qquad d_{23} = \dfrac{\lambda_2}{\lambda_3}
 \end{equation*}
 \pause
 \bigskip
@@ -247,10 +251,9 @@ on dit alors que les $d_{ij}$ forment un \textbf{cobord}.
 \begin{center}
 Si c'est le cas alors
 \[
-d_{12} \times d_{23} = \pause
-\dfrac{\lambda_1}{\lambda_2} \times \dfrac{\lambda_2}{\lambda_3} = \pause
-\dfrac{\lambda_1}{\lambda_3} = \pause
-d_{13}
+d_{12} \times d_{23} \times d_{31}= \pause
+\dfrac{\lambda_1}{\lambda_2} \times \dfrac{\lambda_2}{\lambda_3} \times  \dfrac{\lambda_3}{\lambda_1}= \pause
+1
 \]
 \end{center}
 \end{frame}
@@ -258,9 +261,9 @@ d_{13}
 \iffalse
 \begin{frame}
 \begin{center}
-\nota{Si l'on regarde l'ensemble des triplet $d_{12},d_{13}, d_{23}$ mais qu'on force ceux qui s'écrivent comme des quotients de $\lambda_i$ à s'annuler on a construit un objet de ce qu'on appelle \textbf{espace de cohomologie}}
+\nota{Si l'on regarde l'ensemble des triplet $d_{12},d_{31}, d_{23}$ mais qu'on force ceux qui s'écrivent comme des quotients de $\lambda_i$ à s'annuler on a construit un objet de ce qu'on appelle \textbf{espace de cohomologie}}
 \[
-H^1(U, \R^{+*}) = \dfrac{\left\{\text{triplets }(d_{12},d_{13}, d_{23})\right\}}{\left\{\text{triplets }(d_{12},d_{13}, d_{23}) \text{ tels que }d_{ij} = \lambda_i/\lambda_j\right\}}
+H^1(U, \R^{+*}) = \dfrac{\left\{\text{triplets }(d_{12},d_{31}, d_{23})\right\}}{\left\{\text{triplets }(d_{12},d_{31}, d_{23}) \text{ tels que }d_{ij} = \lambda_i/\lambda_j\right\}}
 \]
 \end{center}
 \end{frame}
@@ -275,22 +278,37 @@ H^1(U, \R^{+*}) = \dfrac{\left\{\text{triplets }(d_{12},d_{13}, d_{23})\right\}}
 \includegraphics<1>[scale=.4]{../Images/ABC.pdf}
 \includegraphics<2|handout:0>[scale=.4]{../Images/A1<B1.pdf}
 \note[item]{On voit que le point $A_1$ est plus proche que le point $B_1$}
-\only<3,5,7>{
+\only<2,3,5,7>{
 \[
-\text{distance}(A_1) < \text{distance}(B_1)
+OA_1 < OB_1
 \]}
 \includegraphics<4|handout:0>[scale=.4]{../Images/B3<C3.pdf}
 \note[item]{Le point $B_3$ est plus proche que le point $C_3$}
 \only<5,7>{
 \[
-\text{distance}(B_3) < \text{distance}(C_3)
+OB_3 < OC_3
 \]}
 \includegraphics<6|handout:0>[scale=.4]{../Images/A2>C2.pdf}
 \note[item]{Le point $C_2$ est plus proche que le point $A_2$}
 \only<7>{
 \[
-\text{distance}(A_2) > \text{distance}(C_2)
+OC_2 < OA_2
 \]}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\nota{En regroupant tout ça}
+\begin{center}
+\begin{align*}
+1 &= d_{12} \times d_{23} \times d_{31}\\
+\uncover<2->{&= \dfrac{OA_1}{OA_2} \times \dfrac{OC_2}{OC_3} \times \dfrac{OB_3}{OB_1}\\ }
+\only<3>{&= \dfrac{OA_1}{OB_1} \times \dfrac{OC_2}{OA_2} \times \dfrac{OB_3}{OC_3}\\ }
+\uncover<4->{&= \underset{<1}{\underbrace{\dfrac{OA_1}{OB_1}}} \times \underset{<1}{\underbrace{\dfrac{OC_2}{OA_2}}} \times \underset{<1}{\underbrace{\dfrac{OB_3}{OC_3}}}\\ }
+\uncover<5->{&< 1\\  }
+\end{align*}
+
+\uncover<6->{Le \textit{triangle de Penrose} n'existe pas.}
 \end{center}
 \end{frame}
 
@@ -311,7 +329,6 @@ d_{13} &= d_{12} \times d_{23}\\
 \uncover<8->{Le \textit{triangle de Penrose} n'existe pas.}
 \end{center}
 \end{frame}
-\fi
 
 \begin{frame}
 \nota{En regroupant tout ça}
@@ -337,6 +354,7 @@ d_{13} &= d_{12} \times d_{23}\\
 \uncover<11->{Le \textit{triangle de Penrose} n'existe pas.}
 \end{center}
 \end{frame}
+\fi
 
 \begin{frame}
 \begin{center}
@@ -345,6 +363,8 @@ d_{13} &= d_{12} \times d_{23}\\
 \end{center}
 \end{frame}
 
+
+\appendix
 
 \begin{frame}
 \begin{center}
@@ -355,30 +375,4 @@ d_{13} &= d_{12} \times d_{23}\\
 
 \end{frame}
 
-
-
-
-
-
-
-
-
-\appendix
-
-\bibliographystyle{amsalpha}
-\nocite{*}
-
-\begin{frame}
-\bibliography{./Biblio.bib}
-\end{frame}
-\iffalse
-\begin{frame}
-\frametitle{Remerciements}
-\begin{itemize}[<+->]
-\item Merci à Arnaud Chéritat pour les images.
-\item Merci aux organisateurs.
-\item Merci de votre attention !
-\end{itemize}
-\end{frame}
-\fi
 \end{document}
