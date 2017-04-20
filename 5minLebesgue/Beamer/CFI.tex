@@ -1,6 +1,6 @@
 \documentclass[12pt]{beamer}% version imprimable avec notes d’orateur, handout
-%\usepackage[couleur]{/home/basile/Git/Latex/Headfiles/dipneuste}
-\usepackage[couleur]{/home/basile/Latex/Headfiles/dipneuste}
+\usepackage[couleur]{/home/basile/Git/Latex/Headfiles/dipneuste}
+%\usepackage[couleur]{/home/basile/Latex/Headfiles/dipneuste}
 %\usepackage[orientation=portrait,size=A4]{beamerposter}
 %\usepackage[couleur]{/home/basile/Latex/Headfiles/dipneuste}
 \usepackage{pgfpages}
@@ -294,6 +294,7 @@ H^1(U, \R^{+*}) = \dfrac{\left\{\text{triplets }(d_{12},d_{13}, d_{23})\right\}}
 \end{center}
 \end{frame}
 
+\iffalse
 \begin{frame}
 \nota{En regroupant tout ça}
 \begin{center}
@@ -310,22 +311,27 @@ d_{13} &= d_{12} \times d_{23}\\
 \uncover<8->{Le \textit{triangle de Penrose} n'existe pas.}
 \end{center}
 \end{frame}
-
+\fi
 
 \begin{frame}
 \nota{En regroupant tout ça}
 \begin{center}
 \begin{align*}
-  d_{13} \times \text{distance}(C_3) \only<1>{ &= d_{12} \times d_{23} \times \text{distance}(C_3)\\  \note[item]{Condition de cocycle}}
-\only<2>{&= d_{12} \times \dfrac{\text{distance}(C_2)}{\text{distance}(C_3)}\times \text{distance}(C_3)\\ }
-\uncover<3->{&=  d_{12} \times\text{distance}(C_2)\\ }
-\only<4>{&<  d_{12} \times\text{distance}(A_2)\\  \note[item]{Car $C_2$ est plus proche que $A_2$}}
-\only<5>{&<  \dfrac{\text{distance}(A_1)}{\text{distance}(A_2)}\times\text{distance}(A_2)\\  \note[item]{Car $C_2$ est plus proche que $A_2$}}
-\uncover<6->{&< \text{distance}(A_1)\\  }
-\only<7>{&< \text{distance}(B_1)\\  }
-\only<8>{&< \dfrac{\text{distance}(B_1)}{\text{distance}(B_3)}\text{distance}(B_3)\\  }
-\uncover<9->{&< d_{13} \times \distance{B_3} \\}
-\uncover<10->{&< d_{13} \times \distance{C_3} \\ \note[item]{Car $B_3$ est plus proche que $C_3$.}
+  d_{13} \times \text{distance}(C_3) \uncover<1->{&= d_{12} \times d_{23} \times \text{distance}(C_3)\\  }
+  \note[item]{Condition de cocycle}
+														  \onslide*<2>{&= d_{12} \times \dfrac{\text{distance}(C_2)}{\text{distance}(C_3)}\times \text{distance}(C_3)\\ }
+														  \uncover<3->{&=  d_{12} \times\text{distance}(C_2)\\ }
+													      \uncover<4->{&<  d_{12} \times\text{distance}(A_2)\\  }
+  \note[item]{Car $C_2$ est plus proche que $A_2$}
+                                                              \onslide*<5>{&<  \dfrac{\text{distance}(A_1)}{\text{distance}(A_2)}\times\text{distance}(A_2)\\ }
+  \note[item]{En simplifiant}
+                                                              \uncover<6->{&< \text{distance}(A_1)\\ }
+  \note[item]{Car $A_1$ est plus proche que $B_1$}
+                                                              \uncover<7->{&< \text{distance}(B_1)\\  }
+                                                              \onslide*<8>{&= \dfrac{\text{distance}(B_1)}{\text{distance}(B_3)} \times \text{distance}(B_3)\\  }
+                                                              \uncover<9->{&= d_{13} \times \text{distance}(B_3)\\ }
+                                                              \uncover<10->{&< d_{13} \times \text{distance}(C_3) \\ }
+  \note[item]{Car $B_3$ est plus proche que $C_3$.}
 \end{align*}
 
 \uncover<11->{Le \textit{triangle de Penrose} n'existe pas.}
@@ -340,6 +346,14 @@ d_{13} &= d_{12} \times d_{23}\\
 \end{frame}
 
 
+\begin{frame}
+\begin{center}
+\begin{itemize}
+\item \textsc{Roger Penrose}, \textit{On the Cohomology of Impossible Figures.}\\ \quad Leonardo 25, no. 3/4 Visual Mathematics: Special Double Issue (\textbf{1992}), pp. 245-247\\
+\end{itemize}
+\end{center}
+
+\end{frame}
 
 
 
