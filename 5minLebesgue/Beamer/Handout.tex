@@ -1,22 +1,22 @@
-\documentclass[14pt,xcolor=dvipsnames]{beamer}% version imprimable avec notes d’orateur, handout
+\documentclass[14pt,xcolor=dvipsnames, handout]{beamer}% version imprimable avec notes d’orateur, handout
 \usepackage[couleur]{/home/basile/Git/Latex/Headfiles/dipneuste}
 %\usepackage[couleur]{/home/basile/Latex/Headfiles/dipneuste}
 %\usepackage[orientation=portrait,size=A4]{beamerposter}
 \usepackage{pgfpages}
 \uselanguage{French}
 \languagepath{French}
-%\usefonttheme[onlymath]{serif}
-%\mode<beamer>{\usetheme{Darmstadt}%}
 \usetheme{Madrid}
 % See http://goo.gl/Wxlyy for alternative themes
  
 % Specify base color
 \usecolortheme[named=OliveGreen]{structure}
+%\usefonttheme[onlymath]{serif}
+%\mode<beamer>{\usetheme{Darmstadt}%}
 \setbeamercolor{math text}{fg=DarkBlue}%
 \setbeamercolor{math text displayed}{fg=DarkBlue}
 %\setbeameroption{show notes on second screen = right}
-%\setbeameroption{show only notes}
-
+\setbeameroption{show only notes}
+\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 \title{Cohomologie des figures impossibles}
 \author{Basile Pillet}
 \date{}
@@ -344,32 +344,7 @@ d_{12} \times d_{23} \times d_{31}= \pause
 \begin{frame}
 \begin{center}
 \nota{L'intérêt n'est pas de montrer que le \textit{triangle de Penrose} est impossible ! L'intérêt c'est qu'en mathématique (en algèbre et en géométrie), quand quelque chose ne marche pas, eh bien la vie ne s'arrête pas. Il y a \textbf{des choses}, de nouveaux objets, qui empêchent que ça marche et l'étude de ces \textbf{obstructions} se révèle bien souvent très riche}\vspace*{-2.5em}
-\hspace*{-5em}\includegraphics<1>[scale=.87]{../Images/lego-triangle.jpg}
-\end{center}
-\end{frame}
-
-
-\appendix
-
-\begin{frame}
-\begin{center}
-\begin{itemize}
-\item \textsc{Roger Penrose}, \textit{On the Cohomology of Impossible Figures.}\\ \quad Leonardo 25, no. 3/4 Visual Mathematics: Special Double Issue (\textbf{1992}), pp. 245-247\\
-\end{itemize}
-\end{center}
-
-\end{frame}
-
-
-
-\begin{frame}% inception
-\begin{center}
-\nota{
-Ces conditions sont nécessaire pour que l'objet existe réellement. Sinon on pourrait avoir des problèmes comme dans le film Inception. 
-}
-\vspace*{-1.9em}
-\includegraphics<1>[width=1.1 \paperwidth]{../Images/Inception.jpg}
-\hspace*{-8em}\includegraphics<2|handout:0>[width=1.8 \paperwidth]{../Images/Inception2.jpg}
+\hspace*{-6em}\includegraphics<1>[scale=.87]{../Images/lego-triangle.jpg}
 \end{center}
 \end{frame}
 
