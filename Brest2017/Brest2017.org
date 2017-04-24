@@ -1,5 +1,7 @@
 #+TITLE: ?
 
+#+LATEX_CLASS: amsdip
+
 #+AUTHOR: Basile Pillet
 #+DATE: Mai 2017
 
@@ -78,7 +80,7 @@ Mais comme le $H^1$ s'annule
 
 Grassmanienne des $2$ -plans privée d'un point et d'un $\Pro^1$.
 
-*** Fibré \(L\)-triviaux
+*** Fibré L-triviaux
 
 *** Fibré à connexion associé
 
