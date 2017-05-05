@@ -1,9 +1,14 @@
 #+TITLE: ?
 
-#+LATEX_CLASS: amsdip
-
-#+AUTHOR: Basile Pillet
 #+DATE: Mai 2017
+#+AUTHOR: Basile Pillet
+
+#+LATEX_CLASS: amsdip
+#+LATEX_CLASS_OPTIONS: [a4paper]
+
+#+LATEX_HEADER: \newtheorem{thm}{Théorème}
+
+#+STARTUP: indent
 
 * Plan
 
@@ -25,7 +30,7 @@ En particulier $Z$ est une variété rationnellement connexe.
 - Espace total de $\Oo(1) \oplus \Oo(1)$,
 
 
-** Épaississements
+** Théorie des Épaississements
 Point de vu GA : définir un objet géométrique c'est définir les fonctions dessus. On veut définir ce que sont les *voisinages infinitésimaux d'une droite dans $Z$*
 
 La droite $L$ est représentée par son faisceau de fonctions $\Oo_L$ qui est lié aux fonctions sur $Z$ par la suite exacte
@@ -51,14 +56,50 @@ Une fonction sur $L^{(n)}$ est un jet d'ordre $n$ de fonctions sur $L$.
 Lien avec les vecteurs tangents ; exemples
 :END:
 
+**** Droite dans $\Pro^3$
+Considérons $\Pro^3$ avec coordonnées homogènes $[X_0:X_1:X_2:X_3]$ et définissons $L$ la droite d'équation $X_1=X_2= 0$. Le faisceau $\Ii_L$ est localement engendré par
+- $x = X_1/X_0$ et $y = X_2/X_0$ sur $U_0$
+- $u = X_1/X_3$ et $v = X_2/X_3$ sur $U_3$
+Les coordonnées associées sur $L$ sont données par
+- $z = X_3/X_0$ sur $U_0$
+- $w = X_0/X_3$ sur $U_3$
+
+Ainsi sur $U_0$, un germe de fonction qui s'annule sur $L$ s'écrit (pas forcément de manière unique)
+\[
+xf(x,y,z) + yg(x,y,z)
+\]
+et un germe de $\Ii^n$
+\[
+x^nf_n(x,y,z) + x^{n-1}yf_{n-1}(x,y,z) + \cdots + y^nf_0(x,y,z)
+\]
+
+Par exemple $x \in \Oo_{\Pro^3}\vert U_0$ donne par restriction à $L$ la fonction nulle sur $L \cap U_0$, mais définit une fonction locale non-nulle sur $L^{(1)}$ ; cette fonction $\chi$ vérifie $\chi^2 = 0$. (On peut la voir comme un $\dd x$, ou un $\varepsilon$ quand on néglige les termes d'ordre $2$).
+
+*** Épaississement de fibrés
+
+Avec les notations du paragraphe précédent, soit $E \to X$ un fibré vectoriel. On appelle épaississement de $E$ à l’ordre $m$ sur $X^{(m)}$ un faisceau localement libre $\Ff$ de \(\Oo_X\)-modules tel que
+\[
+\Oo_X \otimes_{\Oo^{(m)}} \Ff \simeq \Oo_X(E)
+\]
+c’est-à-dire il étend le fibré $E$ sur $X$ à $X^{(m)}$.
+
+On note $\Ff = \Oo_X^{(m)}(E^{(m)})$.
+
+C'est le faisceau des sections sur $X^{(m)}$ d'un "fibré vectoriel". Si on se restreint aux sections obtenues avec des vrais fonctions locales de $L$, on retrouve $E$.
 
 
+*** Épaississements de connexions
+Là ça devient plus complexe !
 
+Rappel : L'existence d'une connexion $\nabla$ sur un faisceau cohérent $\Ff$ entraîne que $\Ff$ est localement libre. [Malgrange]
 
+https://justinsmath.wordpress.com/2012/05/30/a-coherent-sheaf-with-connection-is-locally-free/
 
+Une connexion sur un faisceau *rigidifie* le faisceau. Dans notre contexte : Soit $\nabla^{(m)}$ une connexion sur $E^{(m)}$. Alors elle définit de manière unique un épaississement $E^{(m+1)}$ de $E^{(m)}$ !
 
+Ainsi épaissir les fibrés à connexion est un ping-pong entre d’une part l’épaississement de la connexion sur un fibré fixé et d’autre part le choix de l’épaississement du fibré. Il y a des obstruction à chaque cran qu'il faut gérer.
 
-
+**** Exemple ?
 
 
 
@@ -85,10 +126,48 @@ Grassmanienne des $2$ -plans privée d'un point et d'un $\Pro^1$.
 *** Fibré à connexion associé
 
 *** EQV catégorie
+On a le théorème
+#+BEGIN_thm
+Il y a une équivalence de catégories
+\begin{equation*}
+\left\lbrace
+\begin{matrix}
+\text{Fibré à connexion sur }C \\
++ \text{ restriction de courbure}
+\end{matrix}
+\right\rbrace \quad \leftrightarrow \quad \left\lbrace
+\begin{matrix}
+\text{Fibré vectoriel holomorphe sur }Z\\
++ \text{ trivial sur les droites}
+\end{matrix}
+\right\rbrace
+\end{equation*}
+#+END_thm
 
-** Épaississements
+** Relation épaississement-courbure
 
 *** Théorème
+On a le théorème
+#+BEGIN_thm
+L'équivalence précédente se restreint à
+\begin{equation*}
+\left\lbrace
+\begin{matrix}
+\text{Fibré à connexion}\\
+\textbf{plate} \text{ sur } C
+\end{matrix}
+\right\rbrace \quad \leftrightarrow \quad \left\lbrace
+\begin{matrix}
+\text{Fibré holomorphe sur }Z\\
+\text{trivial sur les voisinages}\\
+\text{infinitésimaux des droites à l'ordre }2
+\end{matrix}
+\right\rbrace.
+\end{equation*}
+#+END_thm
+
+*** Idée de la preuve ?
+
 
 
 ** Applications
