@@ -1,4 +1,5 @@
-#+TITLE: ?
+
+#+TITLE: Voisinages infinitésimaux de droites projectives complexes et correspondance twistorielle.
 
 #+DATE: Mai 2017
 #+AUTHOR: Basile Pillet
@@ -9,6 +10,12 @@
 #+LATEX_HEADER: \newtheorem{thm}{Théorème}
 
 #+STARTUP: indent
+
+** Résumé
+
+Les correspondances twistorielles sont des constructions géométriques qui associent à chaque point d'une variété, une droite projective complexe dans un autre espace appelé "espace des twisteurs". En dimension 4, on a une interprétation physique : cette correspondance associe à un point de l’espace-temps la sphère (droite projective complexe) de tous les rayons lumineux arrivant à ce point à cet instant.
+
+Dans cet exposé on présentera les objets de base de la géométrie complexe infinitésimale (épaississements de sous-variétés, de fibrés) et on verra qu'ils se traduisent à travers la correspondance twistorielle en propriétés riemanniennes (connexions et courbures).
 
 * Plan
 
@@ -26,8 +33,12 @@ On fait $2$ hypothèses :
 En particulier $Z$ est une variété rationnellement connexe.
 
 *** EG
-- Espace des twisteurs d'une surface K3 (ou var HK), 
+- Correspondance des twisteurs physique.
+  C'est une forme de philosophie platonicienne : Est-ce que la réalité physique du monde c'est un espace temps qui est une variété pseudo-riemannienne de dimension 4 (ou quelque chose de plus compliqué) ou simplement la réalité se limite à ce qu'on observe (les rayons lumineux qui arrivent à nos yeux). Il se trouve que si on mathématise cette idée en considérant non plus l'espace temps, mais l'espace de toutes les directions de rayons lumineux en tout point, on trouve une variété de dimension $6$ appelée /Espace des twisteurs/ et qui miraculeusement est munie d'une structure de variété complexe. Cette idée a été initialement développée par Sir Roger Penrose dans les années 60.
+
 - Espace total de $\Oo(1) \oplus \Oo(1)$,
+
+- Espace des twisteurs d'une surface K3 (ou var HK), 
 
 
 ** Théorie des Épaississements

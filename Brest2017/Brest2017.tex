@@ -1,19 +1,20 @@
-% Created 2017-05-05 ven. 10:12
+% Created 2017-05-05 ven. 16:23
+% Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{amsart}
-                 \usepackage[couleur,draft]{/home/basile/Git/Latex/Headfiles/amsdip}
-                 \usepackage[utf8x]{inputenc}
-                 \usepackage[T1]{fontenc}
-                 \usepackage{ulem}
-                          \newtheorem{thm}{Théorème}
+          \usepackage[couleur,draft]{/home/basile/Latex/Headfiles/amsdip}
+          \usepackage[utf8x]{inputenc}
+          \usepackage[T1]{fontenc}
+          \usepackage{ulem}
+                  \newtheorem{thm}{Théorème}
 \author{Basile Pillet}
 \date{Mai 2017}
-\title{?}
+\title{Voisinages infinitésimaux de droites projectives complexes et correspondance twistorielle.}
 \hypersetup{
  pdfauthor={Basile Pillet},
- pdftitle={?},
+ pdftitle={Voisinages infinitésimaux de droites projectives complexes et correspondance twistorielle.},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 24.3.1 (Org mode 8.3.4)}, 
+ pdfcreator={Emacs 24.5.1 (Org mode 9.0.3)}, 
  pdflang={English}}
 \begin{document}
 
@@ -21,11 +22,18 @@
 \tableofcontents
 
 
+\subsection{Résumé}
+\label{sec:org2cb3553}
+
+Les correspondances twistorielles sont des constructions géométriques qui associent à chaque point d'une variété, une droite projective complexe dans un autre espace appelé "espace des twisteurs". En dimension 4, on a une interprétation physique : cette correspondance associe à un point de l’espace-temps la sphère (droite projective complexe) de tous les rayons lumineux arrivant à ce point à cet instant.
+
+Dans cet exposé on présentera les objets de base de la géométrie complexe infinitésimale (épaississements de sous-variétés, de fibrés) et on verra qu'ils se traduisent à travers la correspondance twistorielle en propriétés riemanniennes (connexions et courbures).
+
 \section{Plan}
-\label{sec:orgheadline19}
+\label{sec:org28f316f}
 
 \subsubsection{Contexte}
-\label{sec:orgheadline1}
+\label{sec:org7b07137}
 On se fixe une variété complexe \(Z\) fibrée sur \(\Pro^1\).
 
 On fait \(2\) hypothèses :
@@ -41,15 +49,19 @@ Les droites de \(Z\) peuvent se déformer dans \(Z\).
 En particulier \(Z\) est une variété rationnellement connexe.
 
 \subsubsection{EG}
-\label{sec:orgheadline2}
+\label{sec:org3aaf1bb}
 \begin{itemize}
-\item Espace des twisteurs d'une surface K3 (ou var HK),
+\item Correspondance des twisteurs physique.
+C'est une forme de philosophie platonicienne : Est-ce que la réalité physique du monde c'est un espace temps qui est une variété pseudo-riemannienne de dimension 4 (ou quelque chose de plus compliqué) ou simplement la réalité se limite à ce qu'on observe (les rayons lumineux qui arrivent à nos yeux). Il se trouve que si on mathématise cette idée en considérant non plus l'espace temps, mais l'espace de toutes les directions de rayons lumineux en tout point, on trouve une variété de dimension \(6\) appelée \emph{Espace des twisteurs} et qui miraculeusement est munie d'une structure de variété complexe. Cette idée a été initialement développée par Sir Roger Penrose dans les années 60.
+
 \item Espace total de \(\Oo(1) \oplus \Oo(1)\),
+
+\item Espace des twisteurs d'une surface K3 (ou var HK),
 \end{itemize}
 
 
 \subsection{Théorie des Épaississements}
-\label{sec:orgheadline8}
+\label{sec:org26c48a0}
 Point de vu GA : définir un objet géométrique c'est définir les fonctions dessus. On veut définir ce que sont les \textbf{voisinages infinitésimaux d'une droite dans \(Z\)}
 
 La droite \(L\) est représentée par son faisceau de fonctions \(\Oo_L\) qui est lié aux fonctions sur \(Z\) par la suite exacte
@@ -61,7 +73,7 @@ où \(i : L \hookrightarrow Z\) et \(\Ii_L\) l'idéal des fonctions sur \(Z\) qu
 C'est-à-dire : Une fonction sur \(L\) provient d'une fonction sur \(Z\) modulo les fonctions qui s'annulent sur \(L\). (où tout est à comprendre au sens "local")
 
 \subsubsection{Épaississement}
-\label{sec:orgheadline4}
+\label{sec:org93112e4}
 Il suffit de définir \(\Oo_L^{(n)}\) le faisceau des fonctions
 \[
 0 \to \Ii^{n+1}_L \to \Oo_Z \to i_* \Oo_L^{(n)} \to 0
@@ -77,7 +89,7 @@ Une fonction sur \(L^{(n)}\) est un jet d'ordre \(n\) de fonctions sur \(L\).
 
 \begin{enumerate}
 \item Droite dans \(\Pro^3\)
-\label{sec:orgheadline3}
+\label{sec:orgd6f4a29}
 Considérons \(\Pro^3\) avec coordonnées homogènes \([X_0:X_1:X_2:X_3]\) et définissons \(L\) la droite d'équation \(X_1=X_2= 0\). Le faisceau \(\Ii_L\) est localement engendré par
 \begin{itemize}
 \item \(x = X_1/X_0\) et \(y = X_2/X_0\) sur \(U_0\)
@@ -102,7 +114,7 @@ Par exemple \(x \in \Oo_{\Pro^3}\vert U_0\) donne par restriction à \(L\) la fo
 \end{enumerate}
 
 \subsubsection{Épaississement de fibrés}
-\label{sec:orgheadline5}
+\label{sec:orgc4413a8}
 
 Avec les notations du paragraphe précédent, soit \(E \to X\) un fibré vectoriel. On appelle épaississement de \(E\) à l’ordre \(m\) sur \(X^{(m)}\) un faisceau localement libre \(\Ff\) de \(\Oo_X\)-modules tel que
 \[
@@ -112,11 +124,11 @@ c’est-à-dire il étend le fibré \(E\) sur \(X\) à \(X^{(m)}\).
 
 On note \(\Ff = \Oo_X^{(m)}(E^{(m)})\).
 
-C'est le faisceau des sections sur \(X^{(m)}\) d'un fibré vectoriel.
+C'est le faisceau des sections sur \(X^{(m)}\) d'un "fibré vectoriel". Si on se restreint aux sections obtenues avec des vrais fonctions locales de \(L\), on retrouve \(E\).
 
 
 \subsubsection{Épaississements de connexions}
-\label{sec:orgheadline7}
+\label{sec:orgf8ca8ec}
 Là ça devient plus complexe !
 
 Rappel : L'existence d'une connexion \(\nabla\) sur un faisceau cohérent \(\Ff\) entraîne que \(\Ff\) est localement libre. [Malgrange]
@@ -129,18 +141,18 @@ Ainsi épaissir les fibrés à connexion est un ping-pong entre d’une part l�
 
 \begin{enumerate}
 \item Exemple ?
-\label{sec:orgheadline6}
+\label{sec:orgc434f3d}
 \end{enumerate}
 
 
 
 \subsection{Correspondance de Buchdahl}
-\label{sec:orgheadline14}
+\label{sec:orgb622134}
 
 On s'intéresse aux voisinages infinitésimaux d'une droite dans \(Z\). 
 
 \subsubsection{Espace des sections et correspondance twistorielle}
-\label{sec:orgheadline9}
+\label{sec:orgee0345b}
 Soit \(C\) l'espace des sections de \(Z\) (espace de Douady, espace des cycles de Barlett).
 
 \[
@@ -151,18 +163,18 @@ Mais comme le \(H^1\) s'annule
 (( à finir ))
 
 \subsubsection{EG}
-\label{sec:orgheadline10}
+\label{sec:org17e1650}
 
 Grassmanienne des \(2\) -plans privée d'un point et d'un \(\Pro^1\).
 
 \subsubsection{Fibré L-triviaux}
-\label{sec:orgheadline11}
+\label{sec:orgd66319b}
 
 \subsubsection{Fibré à connexion associé}
-\label{sec:orgheadline12}
+\label{sec:orgce4864b}
 
 \subsubsection{EQV catégorie}
-\label{sec:orgheadline13}
+\label{sec:orgb482355}
 On a le théorème
 \begin{thm}
 Il y a une équivalence de catégories
@@ -182,10 +194,10 @@ Il y a une équivalence de catégories
 \end{thm}
 
 \subsection{Relation épaississement-courbure}
-\label{sec:orgheadline17}
+\label{sec:org86752ed}
 
 \subsubsection{Théorème}
-\label{sec:orgheadline15}
+\label{sec:org1c35106}
 On a le théorème
 \begin{thm}
 L'équivalence précédente se restreint à
@@ -206,20 +218,20 @@ L'équivalence précédente se restreint à
 \end{thm}
 
 \subsubsection{Idée de la preuve ?}
-\label{sec:orgheadline16}
+\label{sec:orgdefea85}
 
 
 
 \subsection{Applications}
-\label{sec:orgheadline18}
+\label{sec:org785a21a}
 
 \section{Idées}
-\label{sec:orgheadline20}
+\label{sec:org2a8d4e1}
 \begin{itemize}
 \item Épaississements ; correspondance de Buchdahl ; courbure
 \end{itemize}
 \section{Références}
-\label{sec:orgheadline21}
+\label{sec:org98cf8fc}
 \begin{itemize}
 \item Buchdahl
 \end{itemize}
