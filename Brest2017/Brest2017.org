@@ -40,7 +40,15 @@ En particulier $Z$ est une variété rationnellement connexe.
 
 - Espace des twisteurs d'une surface K3 (ou var HK), 
 
+** Introduction physique
 
+*** Newton (dim 3)
+
+*** Minkowski (dim 4)
+
+*** Einstein (dim 4)
+
+*** Penrose (dim 3/C)
 ** Théorie des Épaississements
 Point de vu GA : définir un objet géométrique c'est définir les fonctions dessus. On veut définir ce que sont les *voisinages infinitésimaux d'une droite dans $Z$*
 
